@@ -32,7 +32,6 @@ public class BaseServlet extends HttpServlet {
 			Class clazz  =  this.getClass();
 			//根据方法名，获取指定的方法
 			Method method = clazz.getDeclaredMethod(methodName,HttpServletRequest.class,HttpServletResponse.class);
-		
 			System.out.println("----------------------------"+method);
 			//方法执行     url  代表的是方法返回 跳转的url地址
 			url = method.invoke(this, request,response);  //转发

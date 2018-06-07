@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
-<title>Car Trade a Transportation Category Bootstrap Responsive Template | Home :: w3layouts</title>
+<title>汽车网</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Car Trade Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -32,12 +32,12 @@
 				<div class="container">
 					<div class="navbar-header page-scroll">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-							<span class="sr-only">Car Trade</span>
+							<span class="sr-only">汽车交易</span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<h1 class="w3lslogo"><a href="index.html">CT <span>Car Trade</span></a></h1>
+						<h1 class="w3lslogo"><a href="index.html">CT <span>汽车交易</span></a></h1>
 					</div> 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -47,9 +47,9 @@
 							<li><a class="page-scroll" href="#about" data-hover="商城">商城</a></li>
 							<li><a class="page-scroll" href="#features" data-hover="Features">Features</a></li>
 							<li><a class="page-scroll" href="#gallery" data-hover="Gallery">Gallery</a></li>
-							<li><a class="page-scroll" href="#stats" data-hover="Stats">Stats</a></li>
-							<li><a class="page-scroll" href="#blog" data-hover="Blog">Blog</a></li>
-							<li><a class="page-scroll" href="#contact" data-hover="Contact">Contact</a></li>
+							<li><a class="page-scroll" href="#stats" data-hover="登录">登录</a></li>
+							<li><a class="page-scroll" href="#blog" data-hover="注册">注册</a></li>
+							<li><a class="page-scroll" href="#contact" data-hover="后台管理">后台管理</a></li>
 						</ul>
 					</div>
 					<!-- /.navbar-collapse -->
@@ -83,7 +83,7 @@
 						</li>
 					</ul> 
 				</div> 	  
-				<a href="#register" class="wthree-btn btn-6 scroll">Register Now <span></span></a>   
+				<a href="#register" class="wthree-btn btn-6 scroll">立即注册 <span></span></a>   
 			</div> 
 		</div> 
 		<!-- //banner-text -->   
@@ -92,7 +92,7 @@
 	<div class="wthree-soon">
 		<div class="container">
 			<div class="wthree-soon-agileinfo">
-				<h5>Our Turbo Car is almost ready</h5>
+				<h5 style="font-family:方正舒体">我们的跑车已经准备就绪</h5>
 				<!-- timer -->
 				<div class="agileits-timer"> 
 					<div class="clock">
