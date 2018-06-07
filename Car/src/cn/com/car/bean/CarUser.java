@@ -7,133 +7,110 @@ package cn.com.car.bean;
  */
 public class CarUser {
 	//序号
-    private Integer carUid;
+    private Integer car_Uid;
     //用户名
-    private String carUusername;
+    private String car_Uusername;
     //用户密码
-    private String carUpassword;
+    private String car_Upassword;
     //姓名
-    private String carUname;
+    private String car_Uname;
     //性别
-    private String carUsex;
+    private String car_Usex;
     //手机号码
-    private String carUphone;
+    private String car_Uphone;
     //邮箱
-    private String carUemail;
+    private String car_Uemail;
     //身份证
-    private String carUidcard;
+    private String car_Uidcard;
     //会员积分
-    private Integer carUgrade;
+    private Integer car_Ugrade;
     //押金
-    private Integer carUprice;
+    private Integer car_Uprice;
     //信誉积分
-    private Integer carUcredit;
+    private Integer car_Ucredit;
     //备注
-    private String carRemark;
+    private String car_Remark;
     //删除状态
-    private Integer carIsdel;
+    private Integer car_Isdel;
+    
+	public Integer getCar_Uid() {
+		return car_Uid;
+	}
+	public void setCar_Uid(Integer car_Uid) {
+		this.car_Uid = car_Uid;
+	}
+	public String getCar_Uusername() {
+		return car_Uusername;
+	}
+	public void setCar_Uusername(String car_Uusername) {
+		this.car_Uusername = car_Uusername;
+	}
+	public String getCar_Upassword() {
+		return car_Upassword;
+	}
+	public void setCar_Upassword(String car_Upassword) {
+		this.car_Upassword = car_Upassword;
+	}
+	public String getCar_Uname() {
+		return car_Uname;
+	}
+	public void setCar_Uname(String car_Uname) {
+		this.car_Uname = car_Uname;
+	}
+	public String getCar_Usex() {
+		return car_Usex;
+	}
+	public void setCar_Usex(String car_Usex) {
+		this.car_Usex = car_Usex;
+	}
+	public String getCar_Uphone() {
+		return car_Uphone;
+	}
+	public void setCar_Uphone(String car_Uphone) {
+		this.car_Uphone = car_Uphone;
+	}
+	public String getCar_Uemail() {
+		return car_Uemail;
+	}
+	public void setCar_Uemail(String car_Uemail) {
+		this.car_Uemail = car_Uemail;
+	}
+	public String getCar_Uidcard() {
+		return car_Uidcard;
+	}
+	public void setCar_Uidcard(String car_Uidcard) {
+		this.car_Uidcard = car_Uidcard;
+	}
+	public Integer getCar_Ugrade() {
+		return car_Ugrade;
+	}
+	public void setCar_Ugrade(Integer car_Ugrade) {
+		this.car_Ugrade = car_Ugrade;
+	}
+	public Integer getCar_Uprice() {
+		return car_Uprice;
+	}
+	public void setCar_Uprice(Integer car_Uprice) {
+		this.car_Uprice = car_Uprice;
+	}
+	public Integer getCar_Ucredit() {
+		return car_Ucredit;
+	}
+	public void setCar_Ucredit(Integer car_Ucredit) {
+		this.car_Ucredit = car_Ucredit;
+	}
+	public String getCar_Remark() {
+		return car_Remark;
+	}
+	public void setCar_Remark(String car_Remark) {
+		this.car_Remark = car_Remark;
+	}
+	public Integer getCar_Isdel() {
+		return car_Isdel;
+	}
+	public void setCar_Isdel(Integer car_Isdel) {
+		this.car_Isdel = car_Isdel;
+	}
 
-    public Integer getCarUid() {
-        return carUid;
-    }
-
-    public void setCarUid(Integer carUid) {
-        this.carUid = carUid;
-    }
-
-    public String getCarUusername() {
-        return carUusername;
-    }
-
-    public void setCarUusername(String carUusername) {
-        this.carUusername = carUusername == null ? null : carUusername.trim();
-    }
-
-    public String getCarUpassword() {
-        return carUpassword;
-    }
-
-    public void setCarUpassword(String carUpassword) {
-        this.carUpassword = carUpassword == null ? null : carUpassword.trim();
-    }
-
-    public String getCarUname() {
-        return carUname;
-    }
-
-    public void setCarUname(String carUname) {
-        this.carUname = carUname == null ? null : carUname.trim();
-    }
-
-    public String getCarUsex() {
-        return carUsex;
-    }
-
-    public void setCarUsex(String carUsex) {
-        this.carUsex = carUsex == null ? null : carUsex.trim();
-    }
-
-    public String getCarUphone() {
-        return carUphone;
-    }
-
-    public void setCarUphone(String carUphone) {
-        this.carUphone = carUphone == null ? null : carUphone.trim();
-    }
-
-    public String getCarUemail() {
-        return carUemail;
-    }
-
-    public void setCarUemail(String carUemail) {
-        this.carUemail = carUemail == null ? null : carUemail.trim();
-    }
-
-    public String getCarUidcard() {
-        return carUidcard;
-    }
-
-    public void setCarUidcard(String carUidcard) {
-        this.carUidcard = carUidcard == null ? null : carUidcard.trim();
-    }
-
-    public Integer getCarUgrade() {
-        return carUgrade;
-    }
-
-    public void setCarUgrade(Integer carUgrade) {
-        this.carUgrade = carUgrade;
-    }
-
-    public Integer getCarUprice() {
-        return carUprice;
-    }
-
-    public void setCarUprice(Integer carUprice) {
-        this.carUprice = carUprice;
-    }
-
-    public Integer getCarUcredit() {
-        return carUcredit;
-    }
-
-    public void setCarUcredit(Integer carUcredit) {
-        this.carUcredit = carUcredit;
-    }
-
-    public String getCarRemark() {
-        return carRemark;
-    }
-
-    public void setCarRemark(String carRemark) {
-        this.carRemark = carRemark == null ? null : carRemark.trim();
-    }
-
-    public Integer getCarIsdel() {
-        return carIsdel;
-    }
-
-    public void setCarIsdel(Integer carIsdel) {
-        this.carIsdel = carIsdel;
-    }
+    
 }

@@ -8,63 +8,52 @@ package cn.com.car.bean;
  */
 public class CarPss {
 	//型号ID
-    private Integer carModelid;
+    private Integer car_Modelid;
     //进
-    private Integer carIn;
+    private Integer car_In;
     //销
-    private Integer carOut;
+    private Integer car_Out;
     //存
-    private Integer carInventory;
+    private Integer car_Inventory;
     //备注
-    private String carRemark;
+    private String car_Remark;
     //删除状态
-    private Integer carIsdel;
-
-    public Integer getCarModelid() {
-        return carModelid;
-    }
-
-    public void setCarModelid(Integer carModelid) {
-        this.carModelid = carModelid;
-    }
-
-    public Integer getCarIn() {
-        return carIn;
-    }
-
-    public void setCarIn(Integer carIn) {
-        this.carIn = carIn;
-    }
-
-    public Integer getCarOut() {
-        return carOut;
-    }
-
-    public void setCarOut(Integer carOut) {
-        this.carOut = carOut;
-    }
-
-    public Integer getCarInventory() {
-        return carInventory;
-    }
-
-    public void setCarInventory(Integer carInventory) {
-        this.carInventory = carInventory;
-    }
-
-    public String getCarRemark() {
-        return carRemark;
-    }
-
-    public void setCarRemark(String carRemark) {
-        this.carRemark = carRemark == null ? null : carRemark.trim();
-    }
-
-    public Integer getCarIsdel() {
-        return carIsdel;
-    }
-
-    public void setCarIsdel(Integer carIsdel) {
-        this.carIsdel = carIsdel;
-    }
+    private Integer car_Isdel;
+    
+	public Integer getCar_Modelid() {
+		return car_Modelid;
+	}
+	public void setCar_Modelid(Integer car_Modelid) {
+		this.car_Modelid = car_Modelid;
+	}
+	public Integer getCar_In() {
+		return car_In;
+	}
+	public void setCar_In(Integer car_In) {
+		this.car_In = car_In;
+	}
+	public Integer getCar_Out() {
+		return car_Out;
+	}
+	public void setCar_Out(Integer car_Out) {
+		this.car_Out = car_Out;
+	}
+	public Integer getCar_Inventory() {
+		return car_Inventory;
+	}
+	public void setCar_Inventory(Integer car_Inventory) {
+		this.car_Inventory = car_Inventory;
+	}
+	public String getCar_Remark() {
+		return car_Remark;
+	}
+	public void setCar_Remark(String car_Remark) {
+		this.car_Remark = car_Remark;
+	}
+	public Integer getCar_Isdel() {
+		return car_Isdel;
+	}
+	public void setCar_Isdel(Integer car_Isdel) {
+		this.car_Isdel = car_Isdel;
+	}
 }

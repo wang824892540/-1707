@@ -10,63 +10,54 @@ import java.util.Date;
  */
 public class CarRentorder {
 	//订单ID
-    private Integer carOid;
+    private Integer car_Oid;
     //租车时间
-    private Date carRstart;
+    private Date car_Rstart;
     //预计还车时间
-    private Date carRifend;
+    private Date car_Rifend;
     //实际还车时间
-    private Date carRend;
+    private Date car_Rend;
     //备注
-    private String carRemark;
+    private String car_Remark;
     //删除状态
-    private Integer carIsdel;
+    private Integer car_Isdel;
+    
+	public Integer getCar_Oid() {
+		return car_Oid;
+	}
+	public void setCar_Oid(Integer car_Oid) {
+		this.car_Oid = car_Oid;
+	}
+	public Date getCar_Rstart() {
+		return car_Rstart;
+	}
+	public void setCar_Rstart(Date car_Rstart) {
+		this.car_Rstart = car_Rstart;
+	}
+	public Date getCar_Rifend() {
+		return car_Rifend;
+	}
+	public void setCar_Rifend(Date car_Rifend) {
+		this.car_Rifend = car_Rifend;
+	}
+	public Date getCar_Rend() {
+		return car_Rend;
+	}
+	public void setCar_Rend(Date car_Rend) {
+		this.car_Rend = car_Rend;
+	}
+	public String getCar_Remark() {
+		return car_Remark;
+	}
+	public void setCar_Remark(String car_Remark) {
+		this.car_Remark = car_Remark;
+	}
+	public Integer getCar_Isdel() {
+		return car_Isdel;
+	}
+	public void setCar_Isdel(Integer car_Isdel) {
+		this.car_Isdel = car_Isdel;
+	}
 
-    public Integer getCarOid() {
-        return carOid;
-    }
-
-    public void setCarOid(Integer carOid) {
-        this.carOid = carOid;
-    }
-
-    public Date getCarRstart() {
-        return carRstart;
-    }
-
-    public void setCarRstart(Date carRstart) {
-        this.carRstart = carRstart;
-    }
-
-    public Date getCarRifend() {
-        return carRifend;
-    }
-
-    public void setCarRifend(Date carRifend) {
-        this.carRifend = carRifend;
-    }
-
-    public Date getCarRend() {
-        return carRend;
-    }
-
-    public void setCarRend(Date carRend) {
-        this.carRend = carRend;
-    }
-
-    public String getCarRemark() {
-        return carRemark;
-    }
-
-    public void setCarRemark(String carRemark) {
-        this.carRemark = carRemark == null ? null : carRemark.trim();
-    }
-
-    public Integer getCarIsdel() {
-        return carIsdel;
-    }
-
-    public void setCarIsdel(Integer carIsdel) {
-        this.carIsdel = carIsdel;
-    }
+    
 }

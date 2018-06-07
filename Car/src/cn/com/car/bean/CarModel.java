@@ -7,63 +7,54 @@ package cn.com.car.bean;
  */
 public class CarModel {
 	//型号ID
-    private Integer carModelid;
+    private Integer car_Modelid;
     //型号名
-    private String carModelname;
+    private String car_Modelname;
     //品牌ID
-    private Integer carBrandid;
+    private Integer car_Brandid;
     //类型ID
-    private Integer carTypeid;
+    private Integer car_Typeid;
     //备注
-    private String carRemark;
+    private String car_Remark;
     //备注
-    private Integer carIsdel;
+    private Integer car_Isdel;
+    
+	public Integer getCar_Modelid() {
+		return car_Modelid;
+	}
+	public void setCar_Modelid(Integer car_Modelid) {
+		this.car_Modelid = car_Modelid;
+	}
+	public String getCar_Modelname() {
+		return car_Modelname;
+	}
+	public void setCar_Modelname(String car_Modelname) {
+		this.car_Modelname = car_Modelname;
+	}
+	public Integer getCar_Brandid() {
+		return car_Brandid;
+	}
+	public void setCar_Brandid(Integer car_Brandid) {
+		this.car_Brandid = car_Brandid;
+	}
+	public Integer getCar_Typeid() {
+		return car_Typeid;
+	}
+	public void setCar_Typeid(Integer car_Typeid) {
+		this.car_Typeid = car_Typeid;
+	}
+	public String getCar_Remark() {
+		return car_Remark;
+	}
+	public void setCar_Remark(String car_Remark) {
+		this.car_Remark = car_Remark;
+	}
+	public Integer getCar_Isdel() {
+		return car_Isdel;
+	}
+	public void setCar_Isdel(Integer car_Isdel) {
+		this.car_Isdel = car_Isdel;
+	}
 
-    public Integer getCarModelid() {
-        return carModelid;
-    }
-
-    public void setCarModelid(Integer carModelid) {
-        this.carModelid = carModelid;
-    }
-
-    public String getCarModelname() {
-        return carModelname;
-    }
-
-    public void setCarModelname(String carModelname) {
-        this.carModelname = carModelname == null ? null : carModelname.trim();
-    }
-
-    public Integer getCarBrandid() {
-        return carBrandid;
-    }
-
-    public void setCarBrandid(Integer carBrandid) {
-        this.carBrandid = carBrandid;
-    }
-
-    public Integer getCarTypeid() {
-        return carTypeid;
-    }
-
-    public void setCarTypeid(Integer carTypeid) {
-        this.carTypeid = carTypeid;
-    }
-
-    public String getCarRemark() {
-        return carRemark;
-    }
-
-    public void setCarRemark(String carRemark) {
-        this.carRemark = carRemark == null ? null : carRemark.trim();
-    }
-
-    public Integer getCarIsdel() {
-        return carIsdel;
-    }
-
-    public void setCarIsdel(Integer carIsdel) {
-        this.carIsdel = carIsdel;
-    }
+    
 }

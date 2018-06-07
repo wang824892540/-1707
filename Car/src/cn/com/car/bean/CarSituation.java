@@ -8,103 +8,86 @@ import java.util.Date;
  */
 public class CarSituation {
 	//汽车ID
-    private Integer carId;
+    private Integer car_Id;
     //外观
-    private Integer carAppearance;
+    private Integer car_Appearance;
     //内饰
-    private Integer carInterior;
+    private Integer car_Interior;
     //里程
-    private Integer carMileage;
+    private Integer car_Mileage;
     //车况
-    private Integer carCondition;
+    private Integer car_Condition;
     //车源地
-    private String carSource;
+    private String car_Source;
     //上牌时间
-    private Date carLasttime;
+    private Date car_Lasttime;
     //车主电话
-    private String carPhone;
+    private String car_Phone;
     //备注
-    private String carRemark;
+    private String car_Remark;
     //删除状态
-    private Integer carIsdel;
+    private Integer car_Isdel;
+    
+	public Integer getCar_Id() {
+		return car_Id;
+	}
+	public void setCar_Id(Integer car_Id) {
+		this.car_Id = car_Id;
+	}
+	public Integer getCar_Appearance() {
+		return car_Appearance;
+	}
+	public void setCar_Appearance(Integer car_Appearance) {
+		this.car_Appearance = car_Appearance;
+	}
+	public Integer getCar_Interior() {
+		return car_Interior;
+	}
+	public void setCar_Interior(Integer car_Interior) {
+		this.car_Interior = car_Interior;
+	}
+	public Integer getCar_Mileage() {
+		return car_Mileage;
+	}
+	public void setCar_Mileage(Integer car_Mileage) {
+		this.car_Mileage = car_Mileage;
+	}
+	public Integer getCar_Condition() {
+		return car_Condition;
+	}
+	public void setCar_Condition(Integer car_Condition) {
+		this.car_Condition = car_Condition;
+	}
+	public String getCar_Source() {
+		return car_Source;
+	}
+	public void setCar_Source(String car_Source) {
+		this.car_Source = car_Source;
+	}
+	public Date getCar_Lasttime() {
+		return car_Lasttime;
+	}
+	public void setCar_Lasttime(Date car_Lasttime) {
+		this.car_Lasttime = car_Lasttime;
+	}
+	public String getCar_Phone() {
+		return car_Phone;
+	}
+	public void setCar_Phone(String car_Phone) {
+		this.car_Phone = car_Phone;
+	}
+	public String getCar_Remark() {
+		return car_Remark;
+	}
+	public void setCar_Remark(String car_Remark) {
+		this.car_Remark = car_Remark;
+	}
+	public Integer getCar_Isdel() {
+		return car_Isdel;
+	}
+	public void setCar_Isdel(Integer car_Isdel) {
+		this.car_Isdel = car_Isdel;
+	}
 
-    public Integer getCarId() {
-        return carId;
-    }
-
-    public void setCarId(Integer carId) {
-        this.carId = carId;
-    }
-
-    public Integer getCarAppearance() {
-        return carAppearance;
-    }
-
-    public void setCarAppearance(Integer carAppearance) {
-        this.carAppearance = carAppearance;
-    }
-
-    public Integer getCarInterior() {
-        return carInterior;
-    }
-
-    public void setCarInterior(Integer carInterior) {
-        this.carInterior = carInterior;
-    }
-
-    public Integer getCarMileage() {
-        return carMileage;
-    }
-
-    public void setCarMileage(Integer carMileage) {
-        this.carMileage = carMileage;
-    }
-
-    public Integer getCarCondition() {
-        return carCondition;
-    }
-
-    public void setCarCondition(Integer carCondition) {
-        this.carCondition = carCondition;
-    }
-
-    public String getCarSource() {
-        return carSource;
-    }
-
-    public void setCarSource(String carSource) {
-        this.carSource = carSource == null ? null : carSource.trim();
-    }
-
-    public Date getCarLasttime() {
-        return carLasttime;
-    }
-
-    public void setCarLasttime(Date carLasttime) {
-        this.carLasttime = carLasttime;
-    }
-
-    public String getCarPhone() {
-        return carPhone;
-    }
-
-    public void setCarPhone(String carPhone) {
-        this.carPhone = carPhone == null ? null : carPhone.trim();
-    }
-
-    public String getCarRemark() {
-        return carRemark;
-    }
-
-    public void setCarRemark(String carRemark) {
-        this.carRemark = carRemark == null ? null : carRemark.trim();
-    }
-
-    public Integer getCarIsdel() {
-        return carIsdel;
-    }
-
-    public void setCarIsdel(Integer carIsdel) {
-        this.carIsdel = carIsdel;
-    }
+    
 }

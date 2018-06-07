@@ -8,44 +8,37 @@ package cn.com.car.bean;
  */
 public class CarBrand {
 	//品牌ID
-    private Integer carBrandid;
+    private Integer car_Brandid;
     //品牌名
-    private String carBrandname;
+    private String car_Brandname;
     //备注
-    private String carRemark;
+    private String car_Remark;
     //删除状态
-    private Integer carIsdel;
-
+    private Integer car_Isdel;
     
-    public Integer getCarBrandid() {
-        return carBrandid;
-    }
-
-    public void setCarBrandid(Integer carBrandid) {
-        this.carBrandid = carBrandid;
-    }
-
-    public String getCarBrandname() {
-        return carBrandname;
-    }
-
-    public void setCarBrandname(String carBrandname) {
-        this.carBrandname = carBrandname == null ? null : carBrandname.trim();
-    }
-
-    public String getCarRemark() {
-        return carRemark;
-    }
-
-    public void setCarRemark(String carRemark) {
-        this.carRemark = carRemark == null ? null : carRemark.trim();
-    }
-
-    public Integer getCarIsdel() {
-        return carIsdel;
-    }
-
-    public void setCarIsdel(Integer carIsdel) {
-        this.carIsdel = carIsdel;
-    }
+    
+	public Integer getCar_Brandid() {
+		return car_Brandid;
+	}
+	public void setCar_Brandid(Integer car_Brandid) {
+		this.car_Brandid = car_Brandid;
+	}
+	public String getCar_Brandname() {
+		return car_Brandname;
+	}
+	public void setCar_Brandname(String car_Brandname) {
+		this.car_Brandname = car_Brandname;
+	}
+	public String getCar_Remark() {
+		return car_Remark;
+	}
+	public void setCar_Remark(String car_Remark) {
+		this.car_Remark = car_Remark;
+	}
+	public Integer getCar_Isdel() {
+		return car_Isdel;
+	}
+	public void setCar_Isdel(Integer car_Isdel) {
+		this.car_Isdel = car_Isdel;
+	}
 }
