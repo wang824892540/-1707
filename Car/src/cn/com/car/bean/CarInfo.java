@@ -10,6 +10,8 @@ public class CarInfo {
     private Integer car_Id;
     //型号ID
     private Integer car_Modelid;
+    //颜色ID
+    private Integer car_ColorId;
     //车牌号
     private String car_Number;
     //是否新旧
@@ -21,6 +23,12 @@ public class CarInfo {
     //删除状态
     private Integer car_Isdel;
     
+	public Integer getCar_ColorId() {
+		return car_ColorId;
+	}
+	public void setCar_ColorId(Integer car_ColorId) {
+		this.car_ColorId = car_ColorId;
+	}
 	public Integer getCar_Id() {
 		return car_Id;
 	}
