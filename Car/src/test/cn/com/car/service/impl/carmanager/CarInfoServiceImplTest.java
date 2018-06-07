@@ -7,9 +7,14 @@ import org.junit.Test;
 import cn.com.car.bean.CarInfo;
 import cn.com.car.service.carmanager.CarInfoService;
 import cn.com.car.service.carmanager.impl.CarInfoServiceImpl;
-
+/**
+ * 汽车信息单元测试
+ * @author 单苏娜
+ *
+ */
 public class CarInfoServiceImplTest {
-private CarInfoService carInfoService = new CarInfoServiceImpl();
+	
+	private CarInfoService carInfoService = new CarInfoServiceImpl();
 	
 	@Test
 	public void getAll(){

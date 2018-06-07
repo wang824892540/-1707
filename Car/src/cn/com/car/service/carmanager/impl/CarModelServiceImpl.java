@@ -46,4 +46,10 @@ public class CarModelServiceImpl implements CarModelService {
 		return carModelDao.add(carModel);
 	}
 
+	@Override
+	public List<CarModel> getCarModelByIsDel(Integer isDel) {
+		// TODO Auto-generated method stub
+		return carModelDao.getCarModelByIsDel(isDel);
+	}
+
 }

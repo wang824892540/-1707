@@ -43,4 +43,11 @@ public interface CarModelService {
 	 * @return int 受影响的行数
 	 */
 	public int add(CarModel carModel);
+	
+	/**
+	 * 获得没有被删除的汽车型号信息
+	 * @param isDel 汽车型号是否被删除
+	 * @return List<CarModel> 汽车型号List集合
+	 */
+	public List<CarModel> getCarModelByIsDel(Integer isDel);
 }

@@ -8,8 +8,14 @@ import cn.com.car.bean.CarColor;
 import cn.com.car.service.carmanager.CarColorService;
 import cn.com.car.service.carmanager.impl.CarColorServiceImpl;
 
+/**
+ * 汽车颜色单元测试
+ * @author 单苏娜
+ *
+ */
 public class CarColorServiceImplTest {
-private CarColorService carColorService = new CarColorServiceImpl();
+
+	private CarColorService carColorService = new CarColorServiceImpl();
 	
 	@Test
 	public void getAll(){

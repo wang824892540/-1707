@@ -67,11 +67,11 @@ public class CarModelDaoImpl implements CarModelDao{
 	public int update(CarModel carModel) {
 		// TODO Auto-generated method stub
 		int line = 0;
-		String sql = "update car_Model set Car_ModelName=?,Car_Remark=?  where Car_ModelID =?";
+		String sql = "update car_Model set Car_ModelName=?,Car_BrandID =?,Car_TypeID=?,Car_Remark=?  where Car_ModelID =?";
 		try {
 			line = ComPoolUtil.getQueryRunner().update(
 					sql, 
-					carModel.getCar_Modelname(),carModel.getCar_Remark(),carModel.getCar_Modelid());
+					carModel.getCar_Modelname(),carModel.getCar_Brandid(),carModel.getCar_Typeid(),carModel.getCar_Remark(),carModel.getCar_Modelid());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -82,11 +82,11 @@ public class CarModelDaoImpl implements CarModelDao{
 	public int add(CarModel carModel) {
 		// TODO Auto-generated method stub
 		int line = 0;
-		String sql ="insert into car_Model (Car_ModelID,Car_ModelName,Car_Remark,Car_isDel) values(?,?,?,1)";
+		String sql ="insert into car_Model (Car_ModelID,Car_ModelName,Car_BrandID,Car_TypeID,Car_Remark,Car_isDel) values(?,?,?,?,?,1)";
 		try {
 			line = ComPoolUtil.getQueryRunner().update(
 					sql, 
-					carModel.getCar_Modelid(),carModel.getCar_Modelname(),carModel.getCar_Remark());
+					carModel.getCar_Modelid(),carModel.getCar_Modelname(),carModel.getCar_Brandid(),carModel.getCar_Typeid(),carModel.getCar_Remark());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
