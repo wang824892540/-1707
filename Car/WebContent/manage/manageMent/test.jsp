@@ -26,7 +26,83 @@
  
   </head>
   <body class="bg-1">
-	            <div class="row cards">
+	        <div class="row cards">
+              
+              <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+                <div class="card card-redbrown hover">
+                  <div class="front"> 
+
+                    <div class="media">        
+                      <span class="pull-left">
+                        <i class="fa fa-users media-object"></i>
+                      </span>
+
+                      <div class="media-body">
+                        <small>New Users</small>
+                        <h2 class="media-heading animate-number" data-value="3659" data-animation-duration="1500">0</h2>
+                      </div>
+                    </div> 
+
+                    <div class="progress-list">
+                      <div class="details">
+                        <div class="title">This month plan %</div>
+                      </div>
+                      <div class="status pull-right bg-transparent-black-1">
+                        <span class="animate-number" data-value="83" data-animation-duration="1500">0</span>%
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="progress progress-little progress-transparent-black">
+                        <div class="progress-bar animate-progress-bar" data-percentage="83%"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="back">
+                    <a href="#">
+                      <i class="fa fa-bar-chart-o fa-4x"></i>
+                      <span><button></button></span>
+                    </a>  
+                  </div>
+                </div>
+              </div>
+
+			<div class="card-container col-lg-3 col-sm-6 col-sm-12">
+                <div class="card card-redbrown hover">
+                  <div class="front"> 
+
+                    <div class="media">        
+                      <span class="pull-left">
+                        <i class="fa fa-users media-object"></i>
+                      </span>
+
+                      <div class="media-body">
+                        <small>New Users</small>
+                        <h2 class="media-heading animate-number" data-value="3659" data-animation-duration="1500">0</h2>
+                      </div>
+                    </div> 
+
+                    <div class="progress-list">
+                      <div class="details">
+                        <div class="title">This month plan %</div>
+                      </div>
+                      <div class="status pull-right bg-transparent-black-1">
+                        <span class="animate-number" data-value="83" data-animation-duration="1500">0</span>%
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="progress progress-little progress-transparent-black">
+                        <div class="progress-bar animate-progress-bar" data-percentage="83%"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="back">
+                    <a href="#">
+                      <i class="fa fa-bar-chart-o fa-4x"></i>
+                      <span><button>查看详情</button></span>
+                    </a>  
+                  </div>
+                </div>
+              </div>
               
               <div class="card-container col-lg-3 col-sm-6 col-sm-12">
                 <div class="card card-redbrown hover">
