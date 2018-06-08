@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 统一处理中文编码的过滤器
- * @author albin
+ * @author albins
  */
 public class EncodingFilter implements Filter {
 
