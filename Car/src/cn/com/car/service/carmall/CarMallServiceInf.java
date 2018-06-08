@@ -1,15 +1,15 @@
-package cn.com.car.dao.CarMall;
+package cn.com.car.service.carmall;
 
 import java.util.List;
 
 import cn.com.car.bean.CarModel;
 
 /**
- * 汽车租借商城数据操作类
+ * 汽车商城服务接口
  * @author 侯晓伟
  *
  */
-public interface CarMallDaoInf {
+public interface CarMallServiceInf {
 	/**
 	 * 获得所有
 	 */

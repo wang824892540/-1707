@@ -1,9 +1,13 @@
+<%@page import="cn.com.car.bean.CarModel"%>
+<%@page import="java.util.List"%>
+<%@page import="cn.com.car.service.carmanager.impl.CarBrandServiceImpl"%>
+<%@page import="cn.com.car.service.carmanager.CarBrandService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
-	String s="大众";
+	
 %>
 <html>
   <head>
@@ -11,14 +15,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Bootstrap -->
-    <link href="assets/css/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/vendor/animate/animate.css">
-    <link type="text/css" rel="stylesheet" media="all" href="assets/js/vendor/mmenu/css/jquery.mmenu.all.css" />
-    <link rel="stylesheet" href="assets/js/vendor/videobackground/css/jquery.videobackground.css">
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap-checkbox.css">
-    <link rel="stylesheet" href="assets/js/vendor/tabdrop/css/tabdrop.css">
+    <link href="${pageContext.request.contextPath}/show/shoppingMall/assets/css/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/show/shoppingMall/assets/css/vendor/animate/animate.css">
+    <link type="text/css" rel="stylesheet" media="all" href="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/mmenu/css/jquery.mmenu.all.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/videobackground/css/jquery.videobackground.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/show/shoppingMall/assets/css/vendor/bootstrap-checkbox.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/tabdrop/css/tabdrop.css">
 
-    <link href="assets/css/minimal.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/show/shoppingMall/assets/css/minimal.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,10 +32,6 @@
     <![endif]-->
     </head>
   <body class="bg-1">
-
- 
-
-
     <!-- Preloader -->
     <div class="mask"><div id="loader"></div></div>
     <!--/Preloader -->
@@ -107,11 +107,36 @@
                   <!-- tile footer -->
                   <div style="display:block" id="buy">
                   	<div class="row cards">
-              		<table width="83%">
-              	
-              			 <tr>
+	                  	
+              		<table width="84%" border="0">
+              			<tr>
               				<td>
-              					<div class="card-container">
+              					<form class="navbar-form navbar-left" style="width:80%" role="search">
+								  <div class="form-group">
+								    <input type="text" id="searchText" class="form-control" style="opacity:0.6;" placeholder="请输入文本">
+								  </div>
+								  <a id="search" href="" type="submit" style="opacity:0.6;" class="btn btn-success">搜索</a>
+								</form>
+              				</td>
+              			</tr>
+              			
+              			<tr>
+              				<td>
+              					品牌
+              				</td>
+              			</tr>
+              			
+              			<tr>
+              				<td>
+              					车型
+              				</td>
+              			</tr>
+              			<tr>
+              				<td>
+              			<c:forEach items="${datas}" var="data">
+              				
+              				
+              					<div class="card-container col-lg-4 col-sm-4 col-sm-4">
                 				<div class="card card-redbrown hover">
                   				<div class="front"> 
 			
@@ -121,8 +146,10 @@
 			                      </span>
 			
 			                      <div class="media-body">
-			                        <small><%out.println(s);%></small>
-			                        <h2 class="media-heading animate-number" data-value="3639" data-animation-
+			                        <small>
+			                        ${data.car_Brandid}
+			                        </small>
+			                        <h2 class="media-heading animate-number" data-value="${data.car_Modelname}" data-animation-
 			
 			duration="1500">0</h2>
 			                      </div>
@@ -132,29 +159,34 @@
 			                      <div class="details">
 			                        <div class="title">This month plan %</div>
 			                      </div>
+			                       
 			                      <div class="status pull-right bg-transparent-black-1">
-			                        <span class="animate-number" data-value="83" data-animation-
+			                   库存    <span class="animate-number" data-value="100" data-animation-
 			
-			duration="1500">0</span>%
+			duration="1500">0</span>% 
 			                      </div>
 			                      <div class="clearfix"></div>
 			                      <div class="progress progress-little progress-transparent-black">
-			                        <div class="progress-bar animate-progress-bar" data-percentage="83%"></div>
+			                        <div class="progress-bar animate-progress-bar" data-percentage="100%"> </div>
 			                      </div>
+			                     
 			                    </div>
 			
 			                  </div>
 			                  <div class="back">
 			                    <a href="#">
 			                      <i class="fa fa-bar-chart-o fa-4x"></i>
-			                      <span><button></button></span>
+			                      <span><button class="btn btn-success">查看详情</button></span>
 			                    </a>  
 			                  </div>
 			                </div>
 			              </div>
-              				</td>
+              				
+              				
+              			</c:forEach>
+              			 
+              			</td>
               			</tr>
-              			
               	</table>
              </div>
                   </div>
@@ -603,42 +635,42 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="assets/js/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="assets/js/vendor/bootstrap/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/vendor/mmenu/js/jquery.mmenu.min.js"></script>
-    <script type="text/javascript" src="assets/js/vendor/sparkline/jquery.sparkline.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/mmenu/js/jquery.mmenu.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/sparkline/jquery.sparkline.min.js"></script>
     <script type="text/javascript" 
 
-src="assets/js/vendor/nicescroll/jquery.nicescroll.min.js"></script>
-    <script type="text/javascript" src="assets/js/vendor/animate-
+src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/nicescroll/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/animate-
 
 numbers/jquery.animateNumbers.js"></script>
     <script type="text/javascript" 
 
-src="assets/js/vendor/videobackground/jquery.videobackground.js"></script>
-    <script type="text/javascript" src="assets/js/vendor/blockui/jquery.blockUI.js"></script>
+src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/videobackground/jquery.videobackground.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/blockui/jquery.blockUI.js"></script>
 
-    <script src="assets/js/vendor/flot/jquery.flot.min.js"></script>
-    <script src="assets/js/vendor/flot/jquery.flot.time.min.js"></script>
-    <script src="assets/js/vendor/flot/jquery.flot.selection.min.js"></script>
-    <script src="assets/js/vendor/flot/jquery.flot.animator.min.js"></script>
-    <script src="assets/js/vendor/flot/jquery.flot.orderBars.js"></script>
-    <script src="assets/js/vendor/easypiechart/jquery.easypiechart.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/flot/jquery.flot.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/flot/jquery.flot.time.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/flot/jquery.flot.selection.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/flot/jquery.flot.animator.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/flot/jquery.flot.orderBars.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/easypiechart/jquery.easypiechart.min.js"></script>
 
-    <script src="assets/js/vendor/rickshaw/raphael-min.js"></script> 
-    <script src="assets/js/vendor/rickshaw/d3.v2.js"></script>
-    <script src="assets/js/vendor/rickshaw/rickshaw.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/rickshaw/raphael-min.js"></script> 
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/rickshaw/d3.v2.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/rickshaw/rickshaw.min.js"></script>
 
-    <script src="assets/js/vendor/morris/morris.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/morris/morris.min.js"></script>
 
-    <script src="assets/js/vendor/tabdrop/bootstrap-tabdrop.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/tabdrop/bootstrap-tabdrop.min.js"></script>
 
-    <script src="assets/js/vendor/summernote/summernote.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/summernote/summernote.min.js"></script>
 
-    <script src="assets/js/vendor/chosen/chosen.jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/chosen/chosen.jquery.min.js"></script>
 
-    <script src="assets/js/minimal.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/minimal.min.js"></script>
     
     <script>
     //我要租卖车
@@ -650,6 +682,10 @@ src="assets/js/vendor/videobackground/jquery.videobackground.js"></script>
     $("#Car_rent").bind("click",function(){
     	$("#rent").attr("style","display:blocl");
     	$("#buy").attr("style","display:none");
+    });
+    
+    $("#search").bind("click",function(){
+    	$("#search").attr("href","CarMallServlet?method=getCarModelByInfo&searchText="+$("#searchText").val());
     });
     
     $(function(){

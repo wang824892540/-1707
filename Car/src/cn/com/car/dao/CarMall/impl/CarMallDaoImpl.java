@@ -32,7 +32,6 @@ public class CarMallDaoImpl implements CarMallDaoInf{
 			}
 			return carModels;
 		}
-
 	/**
 	 * 增加
 	 */
@@ -58,6 +57,23 @@ public class CarMallDaoImpl implements CarMallDaoInf{
 	public int del() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+	
+	/**
+	 * 通过信息查询汽车型号
+	 */
+	@Override
+	public List<CarModel> getCarModelByInfo(String info) {
+		// TODO Auto-generated method stub
+		List<CarModel> carModels = null;
+		try {
+			carModels = ComPoolUtil.getQueryRunner().query(
+					"select  * from Car_Model where Car_ModelName like '%"+info+"%'",
+					new BeanListHandler<CarModel>(CarModel.class));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return carModels;
 	}
 	
 }

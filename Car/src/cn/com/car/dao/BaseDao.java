@@ -14,16 +14,17 @@ import cn.com.car.utils.ComPoolUtil;
 public class BaseDao {
 	@Test
 	public void getAll() {
-		List<CarModel> CarBrands = null;
-		try {
-			CarBrands = ComPoolUtil.getQueryRunner().query(
-					"select  * from Car_model",
-					new BeanListHandler<CarModel>(CarModel.class));
-		} catch (SQLException e) {
-			e.printStackTrace();
+		// TODO Auto-generated method stub
+			List<CarModel> carModels = null;
+			try {
+				carModels = ComPoolUtil.getQueryRunner().query(
+						"select  * from Car_Model",
+						new BeanListHandler<CarModel>(CarModel.class));
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			for(CarModel cm : carModels){
+				System.out.println(cm.getCar_Modelname());
+			}
 		}
-		for(CarModel car : CarBrands){
-			System.out.println(car.getCar_Modelname());
-		}
-	}
 }
