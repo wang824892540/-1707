@@ -276,8 +276,6 @@ src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/video
     	$("#buy").attr("style","display:none");
     });
     
-    
-    
     $("#search").bind("click",function(){
     	$.post("BuyCarServlet",{method:'getCarModelByInfo',searchText:$('#searchText').val()},function(data){
     		$("#datas").html(" ");
