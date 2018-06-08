@@ -2,6 +2,7 @@ package cn.com.car.service.buycar;
 
 import java.util.List;
 
+import cn.com.car.bean.BuyCarBean;
 import cn.com.car.bean.CarModel;
 
 /**
@@ -13,7 +14,7 @@ public interface BuyCarServiceInf {
 	/**
 	 * 获得所有
 	 */
-	public List<CarModel> getAll();
+	public List<BuyCarBean> getAll();
 	
 	/**
 	 * 增加
@@ -33,5 +34,5 @@ public interface BuyCarServiceInf {
 	/**
 	 * 查询
 	 */
-	public List<CarModel> getCarModelByInfo(String info);
+	public List<BuyCarBean> getCarModelByInfo(String info);
 }

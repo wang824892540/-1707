@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 
+import cn.com.car.bean.BuyCarBean;
 import cn.com.car.bean.CarModel;
 import cn.com.car.service.buycar.BuyCarServiceInf;
 import cn.com.car.service.buycar.impl.BuyCarServiceImpl;
@@ -26,7 +27,7 @@ public class BuyCarServlet extends BaseServlet {
 	 */
 	public Object getAll(HttpServletRequest request, HttpServletResponse response){
 		BuyCarServiceInf cmi = new BuyCarServiceImpl();
-		List<CarModel> listCm = cmi.getAll();
+		List<BuyCarBean> listCm = cmi.getAll();
 		request.setAttribute("datas", listCm);
 		return request.getRequestDispatcher("show/shoppingMall/BuyCar.jsp");
 	}
@@ -36,9 +37,10 @@ public class BuyCarServlet extends BaseServlet {
 	 * 侯晓伟
 	 */
 	public void getCarModelByInfo(HttpServletRequest request, HttpServletResponse response){
+		
 		BuyCarServiceInf cmi = new BuyCarServiceImpl();
 		String info = request.getParameter("searchText");
-		List<CarModel> listCm = cmi.getCarModelByInfo(info);
+		List<BuyCarBean> listCm = cmi.getCarModelByInfo(info);
 		try {
 			response.getWriter().print(new Gson().toJson(listCm));
 			response.getWriter().flush();

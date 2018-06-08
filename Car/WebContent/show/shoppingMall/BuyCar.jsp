@@ -6,9 +6,6 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%
-	
-%>
 <html>
   <head>
     <title>Minimal 1.0 - Google Maps</title>
@@ -23,7 +20,6 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/tabdrop/css/tabdrop.css">
 
     <link href="${pageContext.request.contextPath}/show/shoppingMall/assets/css/minimal.css" rel="stylesheet">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -38,10 +34,6 @@
 
     <!-- Wrap all page content here -->
     <div id="wrap">
-
-      
-
-
       <!-- Make page fluid -->
       <div class="row">
  
@@ -93,7 +85,8 @@
                   <div class="tile-footer color transparent-black rounded-bottom-corners"  style="padding-left:-200px">
 
                     <ul class="nav nav-pills tabdrop col-md-12">
-                      <li><a href="#basicContainer" data-toggle="pill" id="Car_buy" style="font-size:20px">车商城</a></li>           
+                      <li class="active"><a href="#basicContainer" data-toggle="pill" id="Car_buy" style="font-size:20px">新车商城</a></li>   
+                      <li><a href="#basicContainer" data-toggle="pill" id="Car_rent" style="font-size:20px">租车商城</a></li>        
                     </ul>
                   </div>
                   <!-- /tile	 body -->
@@ -120,9 +113,9 @@
               			<tr>
               				<td>
               					<div class="col-md-6">
-	              					<button type="button" class="btn btn-info margin-bottom-20">大众</button>
-	              					<button type="button" class="btn btn-info margin-bottom-20">宝马</button>
-	              					<button type="button" class="btn btn-info margin-bottom-20">奔驰</button>
+	              					<a type="button" class="btn btn-info margin-bottom-20">大众</a>
+	              					<a type="button" class="btn btn-info margin-bottom-20">宝马</a>
+	              					<a type="button" class="btn btn-info margin-bottom-20">奔驰</a>
               					</div>
               				</td>
               			</tr>
@@ -130,11 +123,11 @@
               			<tr>
               				<td>
               					<div class="col-md-6">
-	              					<button type="button" class="btn btn-info margin-bottom-20">轿车</button>
-	              					<button type="button" class="btn btn-info margin-bottom-20">SUV</button>
-	              					<button type="button" class="btn btn-info margin-bottom-20">MPV</button>
-	              					<button type="button" class="btn btn-info margin-bottom-20">跑车</button>
-	              					<button type="button" class="btn btn-info margin-bottom-20">皮卡</button>
+	              					<a type="button" class="btn btn-info margin-bottom-20">轿车</a>
+	              					<a type="button" class="btn btn-info margin-bottom-20">SUV</a>
+	              					<a type="button" class="btn btn-info margin-bottom-20">MPV</a>
+	              					<a type="button" class="btn btn-info margin-bottom-20">跑车</a>
+	              					<a type="button" class="btn btn-info margin-bottom-20">皮卡</a>
               					</div>
               				</td>
               			</tr>
@@ -142,7 +135,7 @@
               				<td id="datas">
               			<c:forEach items="${datas}" var="data">
               					<div class="card-container col-lg-4 col-sm-4 col-sm-4">
-                				<div class="card card-redbrown hover">
+                				<div class="card card-blue hover">
                   				<div class="front"> 
 			
 			                    <div class="media">        
@@ -152,22 +145,21 @@
 			
 			                      <div class="media-body">
 			                        <small>
-			                        ${data.car_Brandid}
+			                        ${data.car_BrandName}
 			                        </small>
-			                        <h2 class="media-heading animate-number" data-value="${data.car_Modelname}" data-animation-
+			                        <h2 class="media-heading animate-number" data-value="${data.car_ModelName}" data-animation-
 			
-			duration="1500">0</h2>
+			duration="1500">${data.car_ModelName}</h2>
 			                      </div>
 			                    </div> 
 			
 			                    <div class="progress-list">
 			                      <div class="details">
-			                        <div class="title">This month plan %</div>
+			                        <div class="title">${data.car_TypeName}</div>
 			                      </div>
 			                       
 			                      <div class="status pull-right bg-transparent-black-1">
-			                   库存    <span class="animate-number" data-value="100" data-animation-
-			
+			                   <span class="animate-number" data-value="100" data-animation-
 			duration="1500">0</span>% 
 			                      </div>
 			                      <div class="clearfix"></div>
@@ -200,6 +192,8 @@
               	</table>
              </div>
                   </div>
+                  
+                  
                   <div style="display:none" id="rent">
                   	我要租车
                   </div>
@@ -262,57 +256,16 @@ src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/video
     <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/minimal.min.js"></script>
     
     <script>
+ 	// Initialize card flip
+    $('.card.hover').hover(function(){
+        $(this).addClass('flip');
+      },function(){
+        $(this).removeClass('flip');
+      });
+    
+ 
     //我要租卖车
-    
-   	function card(){
-		   	 "<div class='card-container col-lg-4 col-sm-4 col-sm-4'>"+
-		 	"<div class='card card-redbrown hover'>"+
-		 		"<div class='front'>" +
-		
-		    "<div class='media'>"   +   
-		       "<span class='pull-left'>"+
-		         "<i class='fa fa-users media-object'></i>"+
-		      "</span>"+
-		
-		       "<div class='media-body'>"+
-		         "<small>"+
-		        " ${data.car_Brandid}"+
-		        " </small>"+
-		        " <h2 class='media-heading animate-number' data-value='${data.car_Modelname}' data-animation-"+
-		
-		 "duration='1500'>0</h2>"+
-		       "</div>"+
-		    " </div> "+
-		
-		     "<div class='progress-list'>"+
-		      " <div class='details'>"+
-		        " <div class='title'>This month plan %</div>"+
-		     "  </div>"+
-		        
-		      " <div class='status pull-right bg-transparent-black-1'>"+
-		    "库存    <span class='animate-number' data-value='100' data-animation-"+
-		
-		 "duration='1500'>0</span>% "+
-		     "  </div>"+
-		      " <div class='clearfix'></div>"+
-		     "  <div class='progress progress-little progress-transparent-black'>"+
-		       "  <div class='progress-bar animate-progress-bar' data-percentage='100%'> </div>"+
-		    "   </div>"+
-		      
-		   "  </div>"+
-		
-		 "  </div>"+
-		  " <div class='back'>"+
-		  "   <a href='#'>"+
-		     "  <i class='fa fa-bar-chart-o fa-4x'></i>"+
-		    "   <span><button class='btn btn-success'>查看详情</button></span>"+
-		   "  </a>  "+
-		 "  </div>"+
-		 "</div>"+
-		 "</div>"
-    }
-    
-    
+
     $("#Car_buy").bind("click",function(){
     	$("#rent").attr("style","display:none");
     	$("#buy").attr("style","display:block");
@@ -323,72 +276,68 @@ src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/video
     	$("#buy").attr("style","display:none");
     });
     
-    
-   // $("#search").bind("click",function(){
-   // 	$("#search").attr("href","BuyCarServlet?method=getCarModelByInfo&searchText="+$('#searchText').val());
-   // });
-    
     $("#search").bind("click",function(){
-    	$.post("BuyCarServlet",{method:getCarModelByInfo,searchText:$('#searchText').val()},function(data){
-    		alert(data);
-    	},"text");
+    	$.post("BuyCarServlet",{method:'getCarModelByInfo',searchText:$('#searchText').val()},function(data){
+    		$("#datas").html(" ");
+    		for(var i = 0;i < data.length;i++){
+    			var card = $("<div class='card-container col-lg-4 col-sm-4 col-sm-4'>"+
+        			 	"<div class='card card-blue hover'>"+
+        			 		"<div class='front'>" +
+        			    "<div class='media'>"   +   
+        			       "<span class='pull-left'>"+
+        			         "<i class='fa fa-users media-object'></i>"+
+        			      "</span>"+
+        			
+        			       "<div class='media-body'>"+
+        			         "<big>"
+        			         +data[i].car_BrandName+
+        			        "</big>"+
+        			        " <h2 class='media-heading animate-number' data-value='"+data[i].car_ModelName+"' data-animation-"+
+        			
+        			 "duration='1500'>"+data[i].car_ModelName+"</h2>"+
+        			       "</div>"+
+        			    " </div> "+
+        			
+        			     "<div class='progress-list'>"+
+        			      " <div class='details'>"+
+        			        " <div class='title'>"+data[i].car_TypeName+"</div>"+
+        			     "  </div>"+
+        			        
+        			      " <div class='status pull-right bg-transparent-black-1'>"+
+        			    "<span class='animate-number' data-value='100' data-animation-"+
+        			
+        			 "duration='1500'>0</span>% "+
+        			     "  </div>"+
+        			      " <div class='clearfix'></div>"+
+        			     "  <div class='progress progress-little progress-transparent-black'>"+
+        			       "  <div class='progress-bar animate-progress-bar' data-percentage='100%'> </div>"+
+        			    "   </div>"+
+        			      
+        			   "  </div>"+
+        			
+        			 "  </div>"+
+        			  " <div class='back'>"+
+        			  "   <a href='#'>"+
+        			     "  <i class='fa fa-bar-chart-o fa-4x'></i>"+
+        			    "   <span><button class='btn btn-success'>查看详情</button></span>"+
+        			   "  </a>  "+
+        			 "  </div>"+
+        			 "</div>"+
+        			 "</div>");
+    				$("#datas").append(card);
+    		}
+    		$('.card.hover').unbind();
+    		$('.card.hover').hover(function(){
+                $(this).addClass('flip');
+              },function(){
+                $(this).removeClass('flip');
+              });
+    	},"json");
     });
     
     
     $(function(){
-        // Initialize card flip
-        var card = $("<div class='card-container col-lg-4 col-sm-4 col-sm-4'>"+
-		 	"<div class='card card-redbrown hover'>"+
-		 		"<div class='front'>" +
-		
-		    "<div class='media'>"   +   
-		       "<span class='pull-left'>"+
-		         "<i class='fa fa-users media-object'></i>"+
-		      "</span>"+
-		
-		       "<div class='media-body'>"+
-		         "<small>"+
-		        " ${data.car_Brandid}"+
-		        " </small>"+
-		        " <h2 class='media-heading animate-number' data-value='${data.car_Modelname}' data-animation-"+
-		
-		 "duration='1500'>0</h2>"+
-		       "</div>"+
-		    " </div> "+
-		
-		     "<div class='progress-list'>"+
-		      " <div class='details'>"+
-		        " <div class='title'>This month plan %</div>"+
-		     "  </div>"+
-		        
-		      " <div class='status pull-right bg-transparent-black-1'>"+
-		    "添加    <span class='animate-number' data-value='100' data-animation-"+
-		
-		 "duration='1500'>0</span>% "+
-		     "  </div>"+
-		      " <div class='clearfix'></div>"+
-		     "  <div class='progress progress-little progress-transparent-black'>"+
-		       "  <div class='progress-bar animate-progress-bar' data-percentage='100%'> </div>"+
-		    "   </div>"+
-		      
-		   "  </div>"+
-		
-		 "  </div>"+
-		  " <div class='back'>"+
-		  "   <a href='#'>"+
-		     "  <i class='fa fa-bar-chart-o fa-4x'></i>"+
-		    "   <span><button class='btn btn-success'>查看详情</button></span>"+
-		   "  </a>  "+
-		 "  </div>"+
-		 "</div>"+
-		 "</div>");
-        $("#Addcard").append(card);
         
-        $('.card.hover').hover(function(){
-            $(this).addClass('flip');
-          },function(){
-            $(this).removeClass('flip');
-          });
       });
         
     </script>
