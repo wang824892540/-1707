@@ -1,11 +1,11 @@
-package cn.com.car.service.carmall.impl;
+package cn.com.car.service.buycar.impl;
 
 import java.util.List;
 
 import cn.com.car.bean.CarModel;
-import cn.com.car.dao.CarMall.CarMallDaoInf;
-import cn.com.car.dao.CarMall.impl.CarMallDaoImpl;
-import cn.com.car.service.carmall.CarMallServiceInf;
+import cn.com.car.dao.buycar.BuyCarDaoInf;
+import cn.com.car.dao.buycar.impl.CarMallDaoImpl;
+import cn.com.car.service.buycar.BuyCarServiceInf;
 
 
 /**
@@ -13,14 +13,14 @@ import cn.com.car.service.carmall.CarMallServiceInf;
  * @author 侯晓伟
  *
  */
-public class CarMallServiceImpl implements CarMallServiceInf{
+public class BuyCarServiceImpl implements BuyCarServiceInf{
 	/**
 	 * 获得所有
 	 */
 	@Override
 	public List<CarModel> getAll() {
 		// TODO Auto-generated method stub
-		CarMallDaoInf cmi = new CarMallDaoImpl();
+		BuyCarDaoInf cmi = new CarMallDaoImpl();
 		return cmi.getAll();
 	}
 
@@ -49,7 +49,7 @@ public class CarMallServiceImpl implements CarMallServiceInf{
 	@Override
 	public List<CarModel> getCarModelByInfo(String info) {
 		// TODO Auto-generated method stub
-		CarMallDaoInf cmi = new CarMallDaoImpl();
+		BuyCarDaoInf cmi = new CarMallDaoImpl();
 		return cmi.getCarModelByInfo(info);
 	}
 

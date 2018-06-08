@@ -1,4 +1,4 @@
-package cn.com.car.dao.CarMall.impl;
+package cn.com.car.dao.buycar.impl;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import cn.com.car.bean.CarModel;
-import cn.com.car.dao.CarMall.CarMallDaoInf;
+import cn.com.car.dao.buycar.BuyCarDaoInf;
 import cn.com.car.utils.ComPoolUtil;
 	
 /**
@@ -14,7 +14,7 @@ import cn.com.car.utils.ComPoolUtil;
  * @author 侯晓伟
  *
  */
-public class CarMallDaoImpl implements CarMallDaoInf{
+public class CarMallDaoImpl implements BuyCarDaoInf{
 
 	/**
 	 *获得所有

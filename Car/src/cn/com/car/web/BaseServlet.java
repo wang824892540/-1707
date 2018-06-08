@@ -18,8 +18,6 @@ import cn.com.car.utils.WebUtils;
  */
 public class BaseServlet extends HttpServlet {
 	
-	//餐桌Service
-	//public DinnertableService tableService = new DinnertableServiceImpl();
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
