@@ -27,7 +27,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     </head>
-  <body class="bg-4">
+  <body class="bg-1">
     <!-- Preloader -->
     <div class="mask"><div id="loader"></div></div>
     <!--/Preloader -->
@@ -135,7 +135,7 @@
               				<td id="datas">
               			<c:forEach items="${datas}" var="data">
               					<div class="card-container col-lg-4 col-sm-4 col-sm-4">
-                				<div class="card card-blue hover">
+                				<div class="card card-redbrown hover">
                   				<div class="front"> 
 			
 			                    <div class="media">        
@@ -144,9 +144,9 @@
 			                      </span>
 			
 			                      <div class="media-body">
-			                        <small>
+			                        <big>
 			                        ${data.car_BrandName}
-			                        </small>
+			                        </big>
 			                        <h2 class="media-heading animate-number" data-value="${data.car_ModelName}" data-animation-
 			
 			duration="1500">${data.car_ModelName}</h2>
@@ -276,18 +276,19 @@ src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/video
     	$("#buy").attr("style","display:none");
     });
     
+    
+    
     $("#search").bind("click",function(){
     	$.post("BuyCarServlet",{method:'getCarModelByInfo',searchText:$('#searchText').val()},function(data){
     		$("#datas").html(" ");
     		for(var i = 0;i < data.length;i++){
     			var card = $("<div class='card-container col-lg-4 col-sm-4 col-sm-4'>"+
-        			 	"<div class='card card-blue hover'>"+
+        			 	"<div class='card card-redbrown hover'>"+
         			 		"<div class='front'>" +
         			    "<div class='media'>"   +   
         			       "<span class='pull-left'>"+
         			         "<i class='fa fa-users media-object'></i>"+
         			      "</span>"+
-        			
         			       "<div class='media-body'>"+
         			         "<big>"
         			         +data[i].car_BrandName+
@@ -335,11 +336,66 @@ src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/video
     	},"json");
     });
     
+    $("a[type='button']").each(function(){
+    	$(this).bind("click",function(){
+        	$.post("BuyCarServlet",{method:'getCarModelByInfo',searchText:$(this).html()},function(data){
+        		$("#datas").html(" ");
+        		for(var i = 0;i < data.length;i++){
+        			var card = $("<div class='card-container col-lg-4 col-sm-4 col-sm-4'>"+
+            			 	"<div class='card card-redbrown hover'>"+
+            			 		"<div class='front'>" +
+            			    "<div class='media'>"   +   
+            			       "<span class='pull-left'>"+
+            			         "<i class='fa fa-users media-object'></i>"+
+            			      "</span>"+
+            			       "<div class='media-body'>"+
+            			         "<big>"
+            			         +data[i].car_BrandName+
+            			        "</big>"+
+            			        " <h2 class='media-heading animate-number' data-value='"+data[i].car_ModelName+"' data-animation-"+
+            			
+            			 "duration='1500'>"+data[i].car_ModelName+"</h2>"+
+            			       "</div>"+
+            			    " </div> "+
+            			
+            			     "<div class='progress-list'>"+
+            			      " <div class='details'>"+
+            			        " <div class='title'>"+data[i].car_TypeName+"</div>"+
+            			     "  </div>"+
+            			        
+            			      " <div class='status pull-right bg-transparent-black-1'>"+
+            			    "<span class='animate-number' data-value='100' data-animation-"+
+            			
+            			 "duration='1500'>0</span>% "+
+            			     "  </div>"+
+            			      " <div class='clearfix'></div>"+
+            			     "  <div class='progress progress-little progress-transparent-black'>"+
+            			       "  <div class='progress-bar animate-progress-bar' data-percentage='100%'> </div>"+
+            			    "   </div>"+
+            			      
+            			   "  </div>"+
+            			
+            			 "  </div>"+
+            			  " <div class='back'>"+
+            			  "   <a href='#'>"+
+            			     "  <i class='fa fa-bar-chart-o fa-4x'></i>"+
+            			    "   <span><button class='btn btn-success'>查看详情</button></span>"+
+            			   "  </a>  "+
+            			 "  </div>"+
+            			 "</div>"+
+            			 "</div>");
+        				$("#datas").append(card);
+        		}
+        		$('.card.hover').unbind();
+        		$('.card.hover').hover(function(){
+                    $(this).addClass('flip');
+                  },function(){
+                    $(this).removeClass('flip');
+                  });
+        	},"json");
+        });
+    });
     
-    $(function(){
-        
-      });
-        
     </script>
   </body>
 </html>
