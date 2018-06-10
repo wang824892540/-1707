@@ -9,11 +9,21 @@ public class BuyCarBean {
 	private String car_TypeName;
 	//型号名
 	private String car_ModelName;
+	//价格
+	private Integer car_Sell;
 	//备注
 	private String car_remark;
 	//删除状态
 	private Integer car_isDel;
 	
+	
+	
+	public Integer getCar_Sell() {
+		return car_Sell;
+	}
+	public void setCar_Sell(Integer car_Sell) {
+		this.car_Sell = car_Sell;
+	}
 	public Integer getCar_ModelID() {
 		return car_ModelID;
 	}

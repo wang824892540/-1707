@@ -15,7 +15,7 @@ import cn.com.car.utils.ComPoolUtil;
  * @author 侯晓伟
  *
  */
-public class CarMallDaoImpl implements BuyCarDaoInf{
+public class BuyCarDaoImpl implements BuyCarDaoInf{
 
 	/**
 	 *获得所有
@@ -26,7 +26,7 @@ public class CarMallDaoImpl implements BuyCarDaoInf{
 			List<BuyCarBean> buyCarBeans = null;
 			try {
 				buyCarBeans = ComPoolUtil.getQueryRunner().query(
-						"select Car_ModelId,Car_BrandName,Car_Typename,car_modelName,car_model.Car_Remark,car_model.Car_isDel from Car_Model left JOIN car_brand on Car_Model.Car_BrandID = car_brand.Car_BrandID left join car_type on car_model.Car_TypeID = car_type.Car_TypeId"
+						"select car_model.Car_ModelId,Car_BrandName,Car_Typename,car_modelName,car_sell,car_model.Car_Remark,car_model.Car_isDel from Car_Model left JOIN car_brand on Car_Model.Car_BrandID = car_brand.Car_BrandID left join car_type on car_model.Car_TypeID = car_type.Car_TypeId LEFT JOIN car_price on car_model.Car_ModelId = car_price.Car_ModelId"
 						,
 						new BeanListHandler<BuyCarBean>(BuyCarBean.class));
 			} catch (SQLException e) {
@@ -70,7 +70,7 @@ public class CarMallDaoImpl implements BuyCarDaoInf{
 		List<BuyCarBean> buyCarBeans = null;
 		try {
 			buyCarBeans = ComPoolUtil.getQueryRunner().query(
-					"select Car_ModelId,Car_BrandName,Car_Typename,car_modelName,car_model.Car_Remark,car_model.Car_isDel from Car_Model left JOIN car_brand on Car_Model.Car_BrandID = car_brand.Car_BrandID left join car_type on car_model.Car_TypeID = car_type.Car_TypeId where Car_ModelName like '%"+info+"%' or Car_TypeName like '%"+info+"%' or Car_BrandName like '%"+info+"%'",
+					"select car_model.Car_ModelId,Car_BrandName,Car_Typename,car_modelName,car_sell,car_model.Car_Remark,car_model.Car_isDel from Car_Model left JOIN car_brand on Car_Model.Car_BrandID = car_brand.Car_BrandID left join car_type on car_model.Car_TypeID = car_type.Car_TypeId LEFT JOIN car_price on car_model.Car_ModelId = car_price.Car_ModelId where Car_ModelName like '%"+info+"%' or Car_TypeName like '%"+info+"%' or Car_BrandName like '%"+info+"%'",
 					new BeanListHandler<BuyCarBean>(BuyCarBean.class));
 		} catch (SQLException e) {
 			e.printStackTrace();

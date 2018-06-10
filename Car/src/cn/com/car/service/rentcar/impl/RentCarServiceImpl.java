@@ -1,12 +1,16 @@
-package cn.com.car.service.buycar.impl;
+package cn.com.car.service.rentcar.impl;
 
 import java.util.List;
 
 import cn.com.car.bean.BuyCarBean;
 import cn.com.car.bean.CarModel;
+import cn.com.car.bean.RentCarBean;
 import cn.com.car.dao.buycar.BuyCarDaoInf;
 import cn.com.car.dao.buycar.impl.BuyCarDaoImpl;
+import cn.com.car.dao.rentCar.RentCarDaoInf;
+import cn.com.car.dao.rentCar.impl.RentCarDaoImpl;
 import cn.com.car.service.buycar.BuyCarServiceInf;
+import cn.com.car.service.rentcar.RentCarServiceInf;
 
 
 /**
@@ -14,14 +18,14 @@ import cn.com.car.service.buycar.BuyCarServiceInf;
  * @author 侯晓伟
  *
  */
-public class BuyCarServiceImpl implements BuyCarServiceInf{
+public class RentCarServiceImpl implements RentCarServiceInf{
 	/**
 	 * 获得所有
 	 */
 	@Override
-	public List<BuyCarBean> getAll() {
+	public List<RentCarBean> getAll() {
 		// TODO Auto-generated method stub
-		BuyCarDaoInf cmi = new BuyCarDaoImpl();
+		RentCarDaoInf cmi = new RentCarDaoImpl();
 		return cmi.getAll();
 	}
 
@@ -48,10 +52,10 @@ public class BuyCarServiceImpl implements BuyCarServiceInf{
 	 * 通过信息查询汽车型号
 	 */
 	@Override
-	public List<BuyCarBean> getCarModelByInfo(String info) {
+	public List<RentCarBean> getCarInfoByInfo(String info) {
 		// TODO Auto-generated method stub
-		BuyCarDaoInf cmi = new BuyCarDaoImpl();
-		return cmi.getCarModelByInfo(info);
+		RentCarDaoInf cmi = new RentCarDaoImpl();
+		return cmi.getCarInfoByInfo(info);
 	}
 
 }

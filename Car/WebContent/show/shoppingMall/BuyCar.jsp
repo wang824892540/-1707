@@ -1,3 +1,4 @@
+<%@page import="java.util.Random"%>
 <%@page import="cn.com.car.bean.CarModel"%>
 <%@page import="java.util.List"%>
 <%@page import="cn.com.car.service.carmanager.impl.CarBrandServiceImpl"%>
@@ -135,8 +136,7 @@
               			<c:forEach items="${datas}" var="data">
               					<div class="card-container col-lg-4 col-sm-4 col-sm-4">
                 				<div class="card card-redbrown hover">
-                  				<div class="front"> 
-			
+                  				<div class="front" style="background-image:url(${pageContext.request.contextPath}/show/html/images/g<%=new Random().nextInt(8)+1%>.jpg);background-size:cover">
 			                    <div class="media">        
 			                      <span class="pull-left">
 			                        <i class="fa fa-users media-object"></i>
@@ -167,12 +167,12 @@
 			                      </div>
 			                     
 			                    </div>
-			
 			                  </div>
 			                  <div class="back">
 			                    <a href="#">
 			                      <i class="fa fa-bar-chart-o fa-4x"></i>
-			                      <span><button class="btn btn-success">查看详情</button></span>
+			                      <span><small>官方指导价</small><h3>${data.car_Sell/10000}万元</h3></span>
+				                  <span><button class="btn btn-success">查看详情</button></span>
 			                    </a>  
 			                  </div>
 			                </div>
@@ -204,18 +204,18 @@
               			<tr>
               				<td>
               						<div class="form-group col-md-6" style="padding-top:1%;">
-								    	<input type="text" id="searchText" class="form-control" style="opacity:0.6;width:100%" placeholder="请输入文本">
+								    	<input type="text" id="searchTextRent" class="form-control" style="opacity:0.6;width:100%" placeholder="请输入文本">
 								  	</div>
-								  	<a id="search" type="submit" style="opacity:1;margin-top:1%" class="btn btn-success">搜索</a>
+								  	<a id="searchRent" type="submit" style="opacity:1;margin-top:1%" class="btn btn-success">搜索</a>
               				</td>
               			</tr>
               			
               			<tr>
               				<td>
               					<div class="col-md-6">
-	              					<a type="button" class="btn btn-info margin-bottom-20">大众</a>
-	              					<a type="button" class="btn btn-info margin-bottom-20">宝马</a>
-	              					<a type="button" class="btn btn-info margin-bottom-20">奔驰</a>
+	              					<a type="button" name="rent" class="btn btn-info margin-bottom-20">大众</a>
+	              					<a type="button" name="rent" class="btn btn-info margin-bottom-20">宝马</a>
+	              					<a type="button" name="rent" class="btn btn-info margin-bottom-20">奔驰</a>
               					</div>
               				</td>
               			</tr>
@@ -223,41 +223,38 @@
               			<tr>
               				<td>
               					<div class="col-md-6">
-	              					<a type="button" class="btn btn-info margin-bottom-20">轿车</a>
-	              					<a type="button" class="btn btn-info margin-bottom-20">SUV</a>
-	              					<a type="button" class="btn btn-info margin-bottom-20">MPV</a>
-	              					<a type="button" class="btn btn-info margin-bottom-20">跑车</a>
-	              					<a type="button" class="btn btn-info margin-bottom-20">皮卡</a>
+	              					<a type="button" name="rent"  class="btn btn-info margin-bottom-20">轿车</a>
+	              					<a type="button" name="rent" class="btn btn-info margin-bottom-20">SUV</a>
+	              					<a type="button" name="rent" class="btn btn-info margin-bottom-20">MPV</a>
+	              					<a type="button" name="rent" class="btn btn-info margin-bottom-20">跑车</a>
+	              					<a type="button" name="rent" class="btn btn-info margin-bottom-20">皮卡</a>
               					</div>
               				</td>
               			</tr>
               			<tr>
-              				<td id="datas">
-              			<c:forEach items="${datas}" var="data">
+              				<td id="rents">
+              			<c:forEach items="${rents}" var="rent">
               					<div class="card-container col-lg-4 col-sm-4 col-sm-4">
                 				<div class="card card-redbrown hover">
-                  				<div class="front"> 
-			
-			                    <div class="media">        
+                  				<div class="front" style="background-image:url(${pageContext.request.contextPath}/show/html/images/g<%=new Random().nextInt(8)+1%>.jpg);background-size:cover">
+			                    <div class="media">      
 			                      <span class="pull-left">
 			                        <i class="fa fa-users media-object"></i>
 			                      </span>
-			
 			                      <div class="media-body">
 			                        <big>
-			                        ${data.car_BrandName}
+			                        ${rent.car_BrandName}
 			                        </big>
-			                        <h2 class="media-heading animate-number" data-value="${data.car_ModelName}" data-animation-
+			                        <h2 class="media-heading animate-number" data-value="${rent.car_modelName}" data-animation-
 			
-			duration="1500">${data.car_ModelName}</h2>
+			duration="1500">${rent.car_modelName}</h2>
 			                      </div>
 			                    </div> 
 			
 			                    <div class="progress-list">
 			                      <div class="details">
-			                        <div class="title">${data.car_TypeName}</div>
+			                        <div class="title">${rent.car_TypeName}</div>
 			                      </div>
-			                       
 			                      <div class="status pull-right bg-transparent-black-1">
 			                   <span class="animate-number" data-value="100" data-animation-
 			duration="1500">0</span>% 
@@ -266,14 +263,14 @@
 			                      <div class="progress progress-little progress-transparent-black">
 			                        <div class="progress-bar animate-progress-bar" data-percentage="100%"> </div>
 			                      </div>
-			                     
 			                    </div>
-			
 			                  </div>
 			                  <div class="back">
 			                    <a href="#">
 			                      <i class="fa fa-bar-chart-o fa-4x"></i>
-			                      <span><button class="btn btn-success">查看详情</button></span>
+			                      <span><small>租车价格</small></span>
+			                      <span><h3>${rent.car_Rant}元/天</h3></span>
+			                      <span><button class="btn btn-success">我要租车</button></span>
 			                    </a>  
 			                  </div>
 			                </div>
@@ -358,8 +355,8 @@ src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/video
       },function(){
         $(this).removeClass('flip');
       });
+ 	
     //我要租卖车
-
     $("#Car_buy").bind("click",function(){
     	$("#rent").attr("style","display:none");
     	$("#buy").attr("style","display:block");
@@ -412,6 +409,7 @@ src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/video
         			  " <div class='back'>"+
         			  "   <a href='#'>"+
         			     "  <i class='fa fa-bar-chart-o fa-4x'></i>"+
+        			     "<span><small>官方指导价</small><h3>"+data[i].car_Sell/10000+"万元</h3></span>"+
         			    "   <span><button class='btn btn-success'>查看详情</button></span>"+
         			   "  </a>  "+
         			 "  </div>"+
@@ -471,7 +469,9 @@ src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/video
             			  " <div class='back'>"+
             			  "   <a href='#'>"+
             			     "  <i class='fa fa-bar-chart-o fa-4x'></i>"+
-            			    "   <span><button class='btn btn-success'>查看详情</button></span>"+
+            			   	"<span><small>官方指导价</small><h3>"+data[i].car_Sell/10000+"万元</h3></span>"+
+            			   	""+
+            			     "   <span><button class='btn btn-success'>查看详情</button></span>"+
             			   "  </a>  "+
             			 "  </div>"+
             			 "</div>"+
@@ -486,6 +486,131 @@ src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/video
                   });
         	},"json");
         });
+    });
+    
+    
+    $("a[name='rent']").each(function(){
+    	$(this).bind("click",function(){
+        	$.post("BuyCarServlet",{method:'getCarInfoByInfo',searchText:$(this).html()},function(data){
+        		$("#rents").html(" ");
+        		for(var i = 0;i < data.length;i++){
+        			var card = $("<div class='card-container col-lg-4 col-sm-4 col-sm-4'>"+
+            			 	"<div class='card card-redbrown hover'>"+
+            			 		"<div class='front'>" +
+            			    "<div class='media'>"   +   
+            			       "<span class='pull-left'>"+
+            			         "<i class='fa fa-users media-object'></i>"+
+            			      "</span>"+
+            			       "<div class='media-body'>"+
+            			         "<big>"
+            			         +data[i].car_BrandName+
+            			        "</big>"+
+            			        " <h2 class='media-heading animate-number' data-value='"+data[i].car_modelName+"' data-animation-"+
+            			
+            			 "duration='1500'>"+data[i].car_modelName+"</h2>"+
+            			       "</div>"+
+            			    " </div> "+
+            			
+            			     "<div class='progress-list'>"+
+            			      " <div class='details'>"+
+            			        " <div class='title'>"+data[i].car_TypeName+"</div>"+
+            			     "  </div>"+
+            			        
+            			      " <div class='status pull-right bg-transparent-black-1'>"+
+            			    "<span class='animate-number' data-value='100' data-animation-"+
+            			
+            			 "duration='1500'>0</span>% "+
+            			     "  </div>"+
+            			      " <div class='clearfix'></div>"+
+            			     "  <div class='progress progress-little progress-transparent-black'>"+
+            			       "  <div class='progress-bar animate-progress-bar' data-percentage='100%'> </div>"+
+            			    "   </div>"+
+            			      
+            			   "  </div>"+
+            			
+            			 "  </div>"+
+            			  " <div class='back'>"+
+            			  "   <a href='#'>"+
+            			     "  <i class='fa fa-bar-chart-o fa-4x'></i>"+
+            			   	"<span><small>官方指导价</small><h3>"+data[i].car_Rant+"元/天</h3></span>"+
+            			   	""+
+            			     "   <span><button class='btn btn-success'>查看详情</button></span>"+
+            			   "  </a>  "+
+            			 "  </div>"+
+            			 "</div>"+
+            			 "</div>");
+        				$("#rents").append(card);
+        		}
+        		$('.card.hover').unbind();
+        		$('.card.hover').hover(function(){
+                    $(this).addClass('flip');
+                  },function(){
+                    $(this).removeClass('flip');
+                  });
+        	},"json");
+        });
+    	
+    });
+    
+    
+    $("#searchRent").bind("click",function(){
+    	$.post("BuyCarServlet",{method:'getCarInfoByInfo',searchText:$('#searchTextRent').val()},function(data){
+    		$("#rents").html(" ");
+    		for(var i = 0;i < data.length;i++){
+    			var card = $("<div class='card-container col-lg-4 col-sm-4 col-sm-4'>"+
+        			 	"<div class='card card-redbrown hover'>"+
+        			 		"<div class='front'>" +
+        			    "<div class='media'>"   +   
+        			       "<span class='pull-left'>"+
+        			         "<i class='fa fa-users media-object'></i>"+
+        			      "</span>"+
+        			       "<div class='media-body'>"+
+        			         "<big>"
+        			         +data[i].car_BrandName+
+        			        "</big>"+
+        			        " <h2 class='media-heading animate-number' data-value='"+data[i].car_modelName+"' data-animation-"+
+        			
+        			 "duration='1500'>"+data[i].car_modelName+"</h2>"+
+        			       "</div>"+
+        			    " </div> "+
+        			
+        			     "<div class='progress-list'>"+
+        			      " <div class='details'>"+
+        			        " <div class='title'>"+data[i].car_TypeName+"</div>"+
+        			     "  </div>"+
+        			        
+        			      " <div class='status pull-right bg-transparent-black-1'>"+
+        			    "<span class='animate-number' data-value='100' data-animation-"+
+        			
+        			 "duration='1500'>0</span>% "+
+        			     "  </div>"+
+        			      " <div class='clearfix'></div>"+
+        			     "  <div class='progress progress-little progress-transparent-black'>"+
+        			       "  <div class='progress-bar animate-progress-bar' data-percentage='100%'> </div>"+
+        			    "   </div>"+
+        			      
+        			   "  </div>"+
+        			
+        			 "  </div>"+
+        			  " <div class='back'>"+
+        			  "   <a href='#'>"+
+        			     "  <i class='fa fa-bar-chart-o fa-4x'></i>"+
+        			   	"<span><small>官方指导价</small><h3>"+data[i].car_Rant+"元/天</h3></span>"+
+        			   	""+
+        			     "   <span><button class='btn btn-success'>查看详情</button></span>"+
+        			   "  </a>  "+
+        			 "  </div>"+
+        			 "</div>"+
+        			 "</div>");
+    				$("#rents").append(card);
+    		}
+    		$('.card.hover').unbind();
+    		$('.card.hover').hover(function(){
+                $(this).addClass('flip');
+              },function(){
+                $(this).removeClass('flip');
+              });
+    	},"json");
     });
     
     </script>
