@@ -44,7 +44,7 @@
 						<ul class="nav navbar-nav navbar-right cl-effect-15">
 							<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
 							<li><a class="page-scroll" href="#home" data-hover="主页">主页</a></li> 
-							<li><a class="page-scroll" href="../../CarMallServlet?method=getAll" data-hover="商城">商城</a></li>
+							<li><a class="page-scroll" href="../../BuyCarServlet?method=getAll" data-hover="商城">商城</a></li>
 							<li><a class="page-scroll" href="#features" data-hover="Features">Features</a></li>
 							<li><a class="page-scroll" href="#gallery" data-hover="Gallery">Gallery</a></li>
 							<li><a class="page-scroll" href="#stats" data-hover="登录">登录</a></li>

@@ -94,7 +94,6 @@
                   <!-- tile footer -->
                   <div style="display:block" id="buy">
                   	<div class="row cards">
-	                  	
               		<table width="84%">
               			<tr>
               				<td>
@@ -195,7 +194,104 @@
                   
                   
                   <div style="display:none" id="rent">
-                  	我要租车
+						<div class="row cards">
+              		<table width="84%">
+              			<tr>
+              				<td>
+              					<hr/>
+              				</td>
+              			</tr>
+              			<tr>
+              				<td>
+              						<div class="form-group col-md-6" style="padding-top:1%;">
+								    	<input type="text" id="searchText" class="form-control" style="opacity:0.6;width:100%" placeholder="请输入文本">
+								  	</div>
+								  	<a id="search" type="submit" style="opacity:1;margin-top:1%" class="btn btn-success">搜索</a>
+              				</td>
+              			</tr>
+              			
+              			<tr>
+              				<td>
+              					<div class="col-md-6">
+	              					<a type="button" class="btn btn-info margin-bottom-20">大众</a>
+	              					<a type="button" class="btn btn-info margin-bottom-20">宝马</a>
+	              					<a type="button" class="btn btn-info margin-bottom-20">奔驰</a>
+              					</div>
+              				</td>
+              			</tr>
+              			
+              			<tr>
+              				<td>
+              					<div class="col-md-6">
+	              					<a type="button" class="btn btn-info margin-bottom-20">轿车</a>
+	              					<a type="button" class="btn btn-info margin-bottom-20">SUV</a>
+	              					<a type="button" class="btn btn-info margin-bottom-20">MPV</a>
+	              					<a type="button" class="btn btn-info margin-bottom-20">跑车</a>
+	              					<a type="button" class="btn btn-info margin-bottom-20">皮卡</a>
+              					</div>
+              				</td>
+              			</tr>
+              			<tr>
+              				<td id="datas">
+              			<c:forEach items="${datas}" var="data">
+              					<div class="card-container col-lg-4 col-sm-4 col-sm-4">
+                				<div class="card card-redbrown hover">
+                  				<div class="front"> 
+			
+			                    <div class="media">        
+			                      <span class="pull-left">
+			                        <i class="fa fa-users media-object"></i>
+			                      </span>
+			
+			                      <div class="media-body">
+			                        <big>
+			                        ${data.car_BrandName}
+			                        </big>
+			                        <h2 class="media-heading animate-number" data-value="${data.car_ModelName}" data-animation-
+			
+			duration="1500">${data.car_ModelName}</h2>
+			                      </div>
+			                    </div> 
+			
+			                    <div class="progress-list">
+			                      <div class="details">
+			                        <div class="title">${data.car_TypeName}</div>
+			                      </div>
+			                       
+			                      <div class="status pull-right bg-transparent-black-1">
+			                   <span class="animate-number" data-value="100" data-animation-
+			duration="1500">0</span>% 
+			                      </div>
+			                      <div class="clearfix"></div>
+			                      <div class="progress progress-little progress-transparent-black">
+			                        <div class="progress-bar animate-progress-bar" data-percentage="100%"> </div>
+			                      </div>
+			                     
+			                    </div>
+			
+			                  </div>
+			                  <div class="back">
+			                    <a href="#">
+			                      <i class="fa fa-bar-chart-o fa-4x"></i>
+			                      <span><button class="btn btn-success">查看详情</button></span>
+			                    </a>  
+			                  </div>
+			                </div>
+			              </div>
+              				
+              				
+              			</c:forEach>
+              			 
+              			</td>
+              			</tr>
+              			<tr>
+              				<td id="Addcard">
+              				
+              				</td>
+              			</tr>
+              	</table>
+             </div>
+
                   </div>
                   
                   <!-- /tile footer -->
@@ -262,8 +358,6 @@ src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/video
       },function(){
         $(this).removeClass('flip');
       });
-    
- 
     //我要租卖车
 
     $("#Car_buy").bind("click",function(){

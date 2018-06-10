@@ -8,9 +8,10 @@ package cn.com.car.bean;
  *
  */
 public class CarPrice {
-	
-	//汽车ID
-    private Integer car_Id;
+	//汽车价格ID
+	private Integer Car_PriceId;
+	//汽车型号ID
+    private Integer car_ModelId;
     //出售价格
     private Integer car_Sell;
     //出租价格
@@ -22,11 +23,18 @@ public class CarPrice {
     //删除状态
     private Integer car_Isdel;
     
-	public Integer getCar_Id() {
-		return car_Id;
+	
+	public Integer getCar_PriceId() {
+		return Car_PriceId;
 	}
-	public void setCar_Id(Integer car_Id) {
-		this.car_Id = car_Id;
+	public void setCar_PriceId(Integer car_PriceId) {
+		Car_PriceId = car_PriceId;
+	}
+	public Integer getCar_ModelId() {
+		return car_ModelId;
+	}
+	public void setCar_ModelId(Integer car_ModelId) {
+		this.car_ModelId = car_ModelId;
 	}
 	public Integer getCar_Sell() {
 		return car_Sell;
