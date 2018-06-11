@@ -11,10 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 
 import cn.com.car.bean.BuyCarBean;
+import cn.com.car.bean.CarAllConfig;
 import cn.com.car.bean.CarModel;
 import cn.com.car.bean.RentCarBean;
 import cn.com.car.service.buycar.BuyCarServiceInf;
 import cn.com.car.service.buycar.impl.BuyCarServiceImpl;
+import cn.com.car.service.carconfig.CarConfigService;
+import cn.com.car.service.carconfig.impl.CarConfigServiceImpl;
+import cn.com.car.service.carmanager.impl.CarColorServiceImpl;
 import cn.com.car.service.rentcar.RentCarServiceInf;
 import cn.com.car.service.rentcar.impl.RentCarServiceImpl;
 import cn.com.car.web.BaseServlet;
@@ -78,4 +82,17 @@ public class BuyCarServlet extends BaseServlet {
 		//request.setAttribute("datas", listCm);
 		//return request.getRequestDispatcher("show/shoppingMall/BuyCar.jsp");
 	}
+	
+	/**
+	 * 详情页面
+	 * 侯晓伟
+	 */
+	public Object goBuyCar(HttpServletRequest request, HttpServletResponse response){
+		CarConfigService ccs = new CarConfigServiceImpl();
+		String modelId = request.getParameter("modelId");
+		CarAllConfig cc = ccs.getCarAllInfoByModelId(modelId);
+		request.setAttribute("config", cc);
+		return request.getRequestDispatcher("show/shoppingMall/CarConfig.jsp");
+	}
+	
 }

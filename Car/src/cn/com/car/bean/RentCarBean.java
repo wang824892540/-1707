@@ -8,11 +8,11 @@ public class RentCarBean {
 	//类型名
 	private String car_TypeName;
 	//型号名
-	private String car_modelName;
+	private String car_ModelName;
 	//租车价格
 	private Integer car_Rant;
 	//备注
-	private String car_Remark;
+	private String car_remark;
 	
 	public Integer getCar_Id() {
 		return car_Id;
@@ -32,24 +32,25 @@ public class RentCarBean {
 	public void setCar_TypeName(String car_TypeName) {
 		this.car_TypeName = car_TypeName;
 	}
-	public String getCar_modelName() {
-		return car_modelName;
-	}
-	public void setCar_modelName(String car_modelName) {
-		this.car_modelName = car_modelName;
-	}
 	public Integer getCar_Rant() {
 		return car_Rant;
 	}
 	public void setCar_Rant(Integer car_Rant) {
 		this.car_Rant = car_Rant;
 	}
-	public String getCar_Remark() {
-		return car_Remark;
+	public String getCar_ModelName() {
+		return car_ModelName;
 	}
-	public void setCar_Remark(String car_Remark) {
-		this.car_Remark = car_Remark;
+	public void setCar_ModelName(String car_ModelName) {
+		this.car_ModelName = car_ModelName;
 	}
+	public String getCar_remark() {
+		return car_remark;
+	}
+	public void setCar_remark(String car_remark) {
+		this.car_remark = car_remark;
+	}
+	
 	
 	
 }
