@@ -32,7 +32,17 @@ public class CarUser {
     private String car_Remark;
     //删除状态
     private Integer car_Isdel;
+    //图片路径
+    private String car_Image;
     
+    
+    
+	public String getCar_Image() {
+		return car_Image;
+	}
+	public void setCar_Image(String car_Image) {
+		this.car_Image = car_Image;
+	}
 	public Integer getCar_Uid() {
 		return car_Uid;
 	}
