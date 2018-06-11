@@ -19,12 +19,12 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>CarMallServlet</display-name>
-    <servlet-name>CarMallServlet</servlet-name>
-    <servlet-class>cn.com.car.web.CarMall.CarMallServlet</servlet-class>
+    <display-name>BuyCarServlet</display-name>
+    <servlet-name>BuyCarServlet</servlet-name>
+    <servlet-class>cn.com.car.web.buycar.BuyCarServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CarMallServlet</servlet-name>
-    <url-pattern>/CarMallServlet</url-pattern>
+    <servlet-name>BuyCarServlet</servlet-name>
+    <url-pattern>/BuyCarServlet</url-pattern>
   </servlet-mapping>
 </web-app>

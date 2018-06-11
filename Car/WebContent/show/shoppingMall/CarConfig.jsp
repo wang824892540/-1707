@@ -227,7 +227,8 @@
     	</div>
     </div>
     
-    
+
+	 <section class="videocontent" id="video"></section>
     
     <div class="container">
 	    	<!-- gallery -->
