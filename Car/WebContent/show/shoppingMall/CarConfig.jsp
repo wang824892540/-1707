@@ -1,12 +1,14 @@
+<%@page import="java.util.Random"%>
+<%@page import="cn.com.car.bean.CarModel"%>
+<%@page import="java.util.List"%>
+<%@page import="cn.com.car.service.carmanager.impl.CarBrandServiceImpl"%>
+<%@page import="cn.com.car.service.carmanager.CarBrandService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="java.util.Random"%>
-
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
-<head>
+  <head>
 <title>汽车详情</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -52,19 +54,27 @@
 
 
 </head>
-<body class="bg-1">
-    <div class="container">
-    	<!-- Make page fluid -->
-      	<div class="row">
+  <body class="bg-1">
+    <!-- Preloader -->
+    <div class="mask"><div id="loader"></div></div>
+    <!--/Preloader -->
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+      <!-- Make page fluid -->
+      <div class="row">
  
-        	<!-- Page content -->
-        	<div id="content" class="col-md-12">
+        <!-- Page content -->
+        <div id="content" class="col-md-12">
           
-            		<!-- row -->
-            		<div class="row">
-						
-              			<!-- col 12 -->
-            			<div class="col-md-12">
+          <!-- content main container -->
+          <div class="main">
+            <!-- row -->
+            <div class="row">
+
+              <!-- col 12 -->
+              <div class="col-md-12">
+				<!-- col 12 -->
 						<h3>基本信息</h3>
                     	<hr/>
                     	<section class="tile color transparent-white col-md-12">
@@ -215,22 +225,10 @@
 	                    	<div class="col-md-8" style="padding-top: 10px;padding-bottom: 10px;">
 		                   		<img src="${pageContext.request.contextPath}/show/html/images/g<%=new Random().nextInt(8)+1%>.jpg" />		                   		
 		                    </div>
-		                    	
-	                    </section>            
-					</div>
-					
-              		<!-- /col 12 -->
-            	</div>
-           		<!-- /row -->
-			</div>
-        	<!-- Page content end -->
-    	</div>
-    </div>
-    
-
-	 <section class="videocontent" id="video"></section>
-    
-    <div class="container">
+		                    
+	                    </section>
+	                      
+	                      <div class="container">
 	    	<!-- gallery -->
 		<div id="gallery" class="gallery">
 			<div class="container">
@@ -388,5 +386,62 @@
 		</div>
 		<!-- //blog --> 
     </div>
-</body>
+	                      
+					</div>
+                
+              <!-- /tile -->
+			  </div>
+              <!-- /col 12 -->
+            </div>
+            <!-- /row -->
+          </div>
+          <!-- /content container -->
+		</div>
+        <!-- Page content end -->
+	  </div>
+	
+    <section class="videocontent" id="video"></section>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/mmenu/js/jquery.mmenu.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/sparkline/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" 
+
+src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/nicescroll/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/animate-
+
+numbers/jquery.animateNumbers.js"></script>
+    <script type="text/javascript" 
+
+src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/videobackground/jquery.videobackground.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/blockui/jquery.blockUI.js"></script>
+
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/flot/jquery.flot.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/flot/jquery.flot.time.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/flot/jquery.flot.selection.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/flot/jquery.flot.animator.min.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/flot/jquery.flot.orderBars.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/easypiechart/jquery.easypiechart.min.js"></script>
+
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/rickshaw/raphael-min.js"></script> 
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/rickshaw/d3.v2.js"></script>
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/rickshaw/rickshaw.min.js"></script>
+
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/morris/morris.min.js"></script>
+
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/tabdrop/bootstrap-tabdrop.min.js"></script>
+
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/summernote/summernote.min.js"></script>
+
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/chosen/chosen.jquery.min.js"></script>
+
+    <script src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/minimal.min.js"></script>
+    
+  </body>
 </html>

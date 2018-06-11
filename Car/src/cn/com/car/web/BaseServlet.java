@@ -37,6 +37,7 @@ public class BaseServlet extends HttpServlet {
 			System.out.println(url);
 			
 		} catch (Exception e) {
+			e.printStackTrace();
 			url="/error/error.jsp";  //重定向
 		}
 
