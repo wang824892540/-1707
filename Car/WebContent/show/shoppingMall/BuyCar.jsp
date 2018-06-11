@@ -28,7 +28,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     </head>
-  <body class="bg-1">
+  <body class="bg-3">
     <!-- Preloader -->
     <div class="mask"><div id="loader"></div></div>
     <!--/Preloader -->
@@ -139,7 +139,7 @@
                   				<div class="front" style="background-image:url(${pageContext.request.contextPath}/show/html/images/g<%=new Random().nextInt(8)+1%>.jpg);background-size:cover">
 			                    <div class="media">        
 			                      <span class="pull-left">
-			                        <i class="fa fa-users media-object"></i>
+			                        <i class=""></i>
 			                      </span>
 			
 			                      <div class="media-body">
@@ -173,7 +173,7 @@
 			                  </div>
 			                  <div class="back">
 			                    <a href="#">
-			                      <i class="fa fa-bar-chart-o fa-4x"></i>
+			                      <i class=""></i>
 			                      <span><small>官方指导价</small><h3>${data.car_Sell/10000}万元</h3></span>
 				                  <span><a href="BuyCarServlet?method=goBuyCar&modelId=${data.car_ModelID}" class="btn btn-success" >查看详情</a></span>
 			                    </a>  
@@ -242,7 +242,7 @@
                   				<div class="front" style="background-image:url(${pageContext.request.contextPath}/show/html/images/g<%=new Random().nextInt(8)+1%>.jpg);background-size:cover">
 			                    <div class="media">      
 			                      <span class="pull-left">
-			                        <i class="fa fa-users media-object"></i>
+			                        <i class=""></i>
 			                      </span>
 			                      <div class="media-body">
 			                        <div class="col-xs-9">
@@ -273,7 +273,7 @@
 			                  </div>
 			                  <div class="back">
 			                    <a href="#">
-			                      <i class="fa fa-bar-chart-o fa-4x"></i>
+			                      <i class=""></i>
 			                      <span><small>租车价格</small></span>
 			                      <span><h3>${rent.car_Rant}元/天</h3></span>
 			                      <span><a class="btn btn-success">我要租车</a></span>
@@ -408,7 +408,7 @@ src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/video
     			 		"<div class='front' style='background-image:url(${pageContext.request.contextPath}/show/html/images/g"+Math.round(Math.random()*7+1)+".jpg);background-size:cover'>" +
     			    "<div class='media'>"   +   
     			       "<span class='pull-left'>"+
-    			         "<i class='fa fa-users media-object'></i>"+
+    			         "<i class=''></i>"+
     			      "</span>"+
     			       "<div class='media-body'>"+
     			       
@@ -446,7 +446,7 @@ src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/video
     			 "  </div>"+
     			  " <div class='back'>"+
     			  "   <a href='#'>"+
-    			     "  <i class='fa fa-bar-chart-o fa-4x'></i>"+
+    			     "  <i class=''></i>"+
     			     "<span><small>官方指导价</small><h3>"+data[i].car_Sell/10000+"万元</h3></span>"+
     			    "   <span><a class='btn btn-success' href='BuyCarServlet?method=goBuyCar&modelId="+data[i].car_ModelID+"'>查看详情</a></span>"+
     			   "  </a>  "+
@@ -501,7 +501,7 @@ src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/video
 			 		"<div class='front' style='background-image:url(${pageContext.request.contextPath}/show/html/images/g"+Math.round(Math.random()*7+1)+".jpg);background-size:cover'>" +
     			    "<div class='media'>"   +   
     			       "<span class='pull-left'>"+
-    			         "<i class='fa fa-users media-object'></i>"+
+    			         "<i class=''></i>"+
     			      "</span>"+
     			       "<div class='media-body'>"+
     			       "<div class='col-xs-9'>"+
@@ -537,7 +537,7 @@ src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/video
     			 "  </div>"+
     			  " <div class='back'>"+
     			  "   <a href='#'>"+
-    			     "  <i class='fa fa-bar-chart-o fa-4x'></i>"+
+    			     "  <i class=''></i>"+
     			   	"<span><small>官方指导价</small><h3>"+data[i].car_Rant+"元/天</h3></span>"+
     			   	""+
     			     "   <span><button class='btn btn-success'>查看详情</button></span>"+
@@ -548,7 +548,6 @@ src="${pageContext.request.contextPath}/show/shoppingMall/assets/js/vendor/video
 				$("#rents").append(card);
 		}
     }
-    
     </script>
   </body>
 </html>

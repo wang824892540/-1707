@@ -22,11 +22,11 @@
 <!-- web-fonts -->    
 <!-- //web-fonts -->
 </head>
-<body>
+<body >
 	<!-- banner -->
-	<div id="home" class="w3ls-banner "> 
+	 
 		<!-- header -->
-		<div class="header-w3layouts"> 
+		<div class="header-w3layouts" style="background-image:url(${pageContext.request.contextPath}/show/main/images/1.jsp)"> 
 			<!-- Navigation -->
 			<nav class="navbar navbar-default navbar-fixed-top">
 				<div class="container">
@@ -60,77 +60,11 @@
 		<!-- //header -->
 		<!-- banner-text -->
 		<div class="banner-text">  
-			<div class="container">
-				<div class="flexslider">
-					<ul class="slides">
-						<li>
-							<div class="banner-w3lstext">  
-								<h2>Trendy Car Sale</h2>
-								<p>Mauris ex nulla aliquam ornare facilisis nec convallis pulvinar a non nunc non leo sollicitudin, Lorem ipsum dolor sit amet.</p>
-							</div>
-						</li>
-						<li>
-							<div class="banner-w3lstext">  
-								<h3>Cars for Sale </h3>
-								<p>Mauris ex nulla aliquam ornare facilisis nec convallis pulvinar a non nunc non leo sollicitudin, Lorem ipsum dolor sit amet.</p>
-							</div>
-						</li>
-						<li>
-							<div class="banner-w3lstext">  
-								<h3>Sapien Delects</h3>
-								<p>Mauris ex nulla aliquam ornare facilisis nec convallis pulvinar a non nunc non leo sollicitudin, Lorem ipsum dolor sit amet.</p>
-							</div>
-						</li>
-					</ul> 
-				</div> 	  
-				<a href="#register" class="wthree-btn btn-6 scroll">立即注册 <span></span></a>   
-			</div> 
+			 
 		</div> 
 		<!-- //banner-text -->   
-	</div>	
-	<!-- //banner --> 
-	<div class="wthree-soon">
-		<div class="container">
-			<div class="wthree-soon-agileinfo">
-				<h5 style="font-family:方正舒体">我们的跑车已经准备就绪</h5>
-				<!-- timer -->
-				<div class="agileits-timer"> 
-					<div class="clock">
-						<div class="column days">
-							<div class="timer" id="days">25</div>
-							<div class="text">Days</div>
-						</div>
-						<div class="timer days"></div>
-						<div class="column">
-							<div class="timer" id="hours">21</div>
-							<div class="text">Hours</div>
-						</div>
-						<div class="timer"></div>
-						<div class="column">
-							<div class="timer" id="minutes">27</div>
-							<div class="text">Minutes</div>
-						</div>
-						<div class="timer"></div>
-						<div class="column">
-							<div class="timer" id="seconds">1</div>
-							<div class="text">Seconds</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>	 
-				</div>
-				<!-- //timer --> 
-				<div class="w3_agile_social_icons">
-					<ul>
-						<li><a href="#" class="icon icon-cube agile_facebook"></a></li>
-						<li><a href="#" class="icon icon-cube agile_rss"></a></li>
-						<li><a href="#" class="icon icon-cube agile_instagram"></a></li>
-						<li><a href="#" class="icon icon-cube agile_t"></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- about -->
+	
+	
 </body>
 <!-- //modal --> 
 	<!-- timer scripts --> 
@@ -169,7 +103,7 @@
 	</script>
 	<!-- //smooth-scrolling-of-move-up -->   
 	<!-- Scrolling Nav JavaScript --> 
-    <script src="js/scrolling-nav.js"></script>  
+    <script src="${pageContext.request.contextPath}/show/main/js/scrolling-nav.js"></script>  
 	<!-- //fixed-scroll-nav-js -->  
 	<!-- bth hover effect --> 
 	<script>
@@ -197,8 +131,8 @@
 	</script>	
 	<!-- //bth hover effect --> 
 	<!-- jarallax -->
-	<script src="js/jarallax.js"></script>
-	<script src="js/SmoothScroll.min.js"></script>
+	<script src="${pageContext.request.contextPath}/show/main/js/jarallax.js"></script>
+	<script src="${pageContext.request.contextPath}/show/main/js/SmoothScroll.min.js"></script>
 	<script type="text/javascript">
 		/* init Jarallax */
 		$('.jarallax').jarallax({
@@ -209,7 +143,7 @@
 	</script>
 	<!-- //jarallax -->   
 	<!-- FlexSlider --> 
-	<script defer src="js/jquery.flexslider.js"></script>
+	<script defer src="${pageContext.request.contextPath}/show/main/js/jquery.flexslider.js"></script>
 	<script type="text/javascript">
 		$(window).load(function(){
 		  $('.flexslider').flexslider({
@@ -222,7 +156,7 @@
 	</script>
 	<!-- //End-FlexSlider -->  
 	<!-- pop-up-script -->
-	<script src="js/jquery.chocolat.js"></script>
+	<script src="${pageContext.request.contextPath}/show/main/js/jquery.chocolat.js"></script>
 	<script type="text/javascript">
 	$(function() {
 		$('.view-seventh a').Chocolat();
@@ -232,5 +166,5 @@
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.js"></script>
+    <script src="${pageContext.request.contextPath}/show/main/js/bootstrap.js"></script>
 </html>

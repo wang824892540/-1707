@@ -65,8 +65,7 @@
       <div class="row">
  
         <!-- Page content -->
-        <div id="content" class="col-md-12">
-          
+        <div id="content" style="padding-right:20%">
           <!-- content main container -->
           <div class="main">
             <!-- row -->
