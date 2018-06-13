@@ -12,10 +12,28 @@ import cn.com.car.bean.CarModel;
 public interface CarModelDao {
 	
 	/**
+	 * 获得汽车型号数据的总条数
+	 * @return int 汽车型号数据的总条数
+	 */
+	public int getCount();
+	
+	/**
+	 * 根据型号名称获得汽车型号数据的总条数
+	 * @return int 汽车型号数据的总条数
+	 */
+	public int getCountByName(String name);
+	
+	/**
+	 * 根据型号是否被删除获得汽车型号数据的总条数
+	 * @return int 汽车型号数据的总条数
+	 */
+	public int getCountByIsDel(Integer isDel);
+	
+	/**
 	 * 获得所有汽车型号
 	 * @return List<CarModel> 汽车型号List集合
 	 */
-	public List<CarModel> getAll();
+	public List<CarModel> getAll(Integer currentPage, Integer maxResult);
 	
 	/**
 	 * 根据汽车型号的ID获得汽车型号信息
@@ -50,5 +68,5 @@ public interface CarModelDao {
 	 * @param isDel 汽车型号是否被删除
 	 * @return List<CarModel> 汽车型号List集合
 	 */
-	public List<CarModel> getCarModelByIsDel(Integer isDel);
+	public List<CarModel> getCarModelByIsDel(Integer isDel,Integer currentPage, Integer maxResult);
 }

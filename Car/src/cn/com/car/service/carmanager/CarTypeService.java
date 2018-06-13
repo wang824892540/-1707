@@ -50,4 +50,11 @@ public interface CarTypeService {
 	 * @return List<CarType> 汽车类型List集合
 	 */
 	public List<CarType> getCarTypeByIsDel(Integer isDel);
+	
+	/**
+	 * 根据汽车类型的名称获得汽车类型信息
+	 * @param name 汽车类型的名称
+	 * @return List<CarType> 汽车类型List集合
+	 */
+	public List<CarType> getCarTypeByName(String name);
 }

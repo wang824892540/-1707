@@ -82,11 +82,11 @@ public class CarTypeDaoImpl implements CarTypeDao{
 	public int add(CarType carType) {
 		// TODO Auto-generated method stub
 		int line = 0;
-		String sql ="insert into car_Type (Car_TypeID,Car_TypeName,Car_Remark,Car_isDel) values(?,?,?,1)";
+		String sql ="insert into car_Type (Car_TypeName,Car_Remark,Car_isDel) values(?,?,1)";
 		try {
 			line = ComPoolUtil.getQueryRunner().update(
 					sql, 
-					carType.getCar_Typeid(),carType.getCar_Typename(),carType.getCar_Remark());
+					carType.getCar_Typename(),carType.getCar_Remark());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -103,6 +103,21 @@ public class CarTypeDaoImpl implements CarTypeDao{
 					sql, 
 					new BeanListHandler<CarType>(CarType.class),
 					isDel);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return carTypeList;
+	}
+
+	@Override
+	public List<CarType> getCarTypeByName(String name) {
+		// TODO Auto-generated method stub
+		List<CarType> carTypeList = null;
+		String sql = "select * from car_type where Car_TypeName like '%"+name+"%' and Car_isDel = 1";
+		try {
+			carTypeList = ComPoolUtil.getQueryRunner().query(
+					sql, 
+					new BeanListHandler<CarType>(CarType.class));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

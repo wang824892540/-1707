@@ -82,11 +82,11 @@ public class CarInfoDaoImpl implements CarInfoDao{
 	public int add(CarInfo carInfo) {
 		// TODO Auto-generated method stub
 		int line = 0;
-		String sql ="insert into car_info (Car_Id,Car_ColorId,Car_ModelID,Car_Number,Car_isNew,Car_state,Car_Remark,Car_isDel) values (?,?,?,?,?,?,?,1)";
+		String sql ="insert into car_info (Car_ColorId,Car_ModelID,Car_Number,Car_isNew,Car_state,Car_Remark,Car_isDel) values (?,?,?,?,?,?,1)";
 		try {
 			line = ComPoolUtil.getQueryRunner().update(
 					sql, 
-					carInfo.getCar_Id(),carInfo.getCar_ColorId(),carInfo.getCar_Modelid(),carInfo.getCar_Number(),carInfo.getCar_Isnew(),carInfo.getCar_State(),carInfo.getCar_Remark());
+					carInfo.getCar_ColorId(),carInfo.getCar_Modelid(),carInfo.getCar_Number(),carInfo.getCar_Isnew(),carInfo.getCar_State(),carInfo.getCar_Remark());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

@@ -52,4 +52,10 @@ public class CarTypeServiceImpl implements CarTypeService {
 		return carTypeDao.getCarTypeByIsDel(isDel);
 	}
 
+	@Override
+	public List<CarType> getCarTypeByName(String name) {
+		// TODO Auto-generated method stub
+		return carTypeDao.getCarTypeByName(name);
+	}
+
 }

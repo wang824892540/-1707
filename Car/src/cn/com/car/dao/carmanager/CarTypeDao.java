@@ -24,6 +24,13 @@ public interface CarTypeDao {
 	public CarType getCarTypeById(Integer id);
 	
 	/**
+	 * 根据汽车类型的名称获得汽车类型信息
+	 * @param name 汽车类型的名称
+	 * @return List<CarType> 汽车类型List集合
+	 */
+	public List<CarType> getCarTypeByName(String name);
+	
+	/**
 	 * 删除汽车类型
 	 * @param carType 汽车类型对象
 	 * @return int 受影响的行数
