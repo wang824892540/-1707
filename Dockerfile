@@ -8,8 +8,5 @@ RUN apt-get update && \
 # 复制 Squid 配置文件
 COPY squid.conf /etc/squid/squid.conf
 
-# 设置 Squid 监听的端口号
-RUN sed -i 's/http_port 3128/http_port 9000/' /etc/squid/squid.conf
-
 # 启动 Squid 服务
 CMD ["squid", "-N"]
