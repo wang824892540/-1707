@@ -8,5 +8,8 @@ RUN apt-get update && \
 # 复制 Squid 配置文件
 COPY squid.conf /etc/squid/squid.conf
 
+# 9000
+EXPOSE 9000
+
 # 启动 Squid 服务
 CMD ["squid", "-N"]
