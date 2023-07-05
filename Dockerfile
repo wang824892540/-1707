@@ -12,4 +12,5 @@ COPY squid.conf /etc/squid/squid.conf
 EXPOSE 9000
 
 # 启动 Squid 服务
-CMD ["squid", "-N"]
+CMD ["sh", "-c", "tail -f /tmp/access.log && squid -N"]
+
