@@ -8,6 +8,8 @@ RUN apt-get update && \
 # 复制 Squid 配置文件
 COPY squid.conf /etc/squid/squid.conf
 
+EXPOSE 9000
+
 RUN touch /tmp/access.log && \
     chown proxy:proxy /tmp/access.log
 
